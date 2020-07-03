@@ -79,12 +79,14 @@
 - Who can I talk to about this?
 - I'd like to book a meeting 	
 
-## intent:ask_about_AI
-- Tell me about AI
-- What do you know about AI?
-- what is artificial intelligence?
-- How can I use AI?
-- I am interested in AI
+## intent:ask_faq
+- Tell me about [AI](subject)
+- What do you know about [AI](subject)?
+- what is [artificial intelligence](subject)?
+- How can I use [AI](subject)?
+- I am interested in [AI](subject)
+- Tell me about the [application process](subject)!
+- How does the [application](subject) work?
 
 ## intent:thank
 - thank you

@@ -5,6 +5,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 import datetime
 import calendar
+import json
 #
 #
 #
@@ -13,7 +14,7 @@ morning = ["morning", "noon"]
 evening = ["evening", "afternoon", "night"]
 
 OPENING_HOURS = {
-	0:	{
+	6:	{
 		"morning": "closed",
 		"evening": "closed"
 	},
@@ -37,12 +38,13 @@ OPENING_HOURS = {
 		"morning": "08:00 - 14:30",
 		"evening": "15:00 - 18:00"
 	},
-	6:	{
+	0:	{
 		"morning": "11:00 - 14:30",
 		"evening": "15:00 - 18:00"
 	},
 
 }
+
 
 def find_opening_hours(day, time_of_day):
 	days = []
@@ -92,11 +94,25 @@ class Opening_Hours_Form(FormAction):
 
 		results = find_opening_hours(day_name, time_of_day)
 		if len(results) == 0:
-			dispatcher.utter_message("Sorry, I couldn't find any opening hours on {}.".format(day_name), results)
-			return []
+			dispatcher.utter_message("Sorry, I couldn't find any opening hours on {}.".format(day_name)+results)
 		elif time_of_day == None:
-			dispatcher.utter_message("These are the opening hours on {}: ".format(day_name), results)
+			dispatcher.utter_message("These are the opening hours on {}: ".format(day_name)+results)
 		else:
-			dispatcher.utter_message("These are the opening hours on {} in the {}: ".format(day_name,time_of_day), results)
+			dispatcher.utter_message("These are the opening hours on {} in the {}: ".format(day_name,time_of_day)+results)
 		return []
 
+class Application_form(FormAction):
+	def name(self) -> Text:
+		return "application_form"
+#
+	@staticmethod
+	def required_slots(tracker:Tracker) -> List[Text]:
+		'''A List of required slots that the form has to fill'''
+		return []
+
+	def submit(self, dispatcher: CollectingDispatcher,
+			tracker: Tracker,
+			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		dispatcher.utter_message("I will redirect you to the application form, if you click [here](https://mindsquare.de/schnellbewerbung-mindsquare/)!")
+		return []
+		

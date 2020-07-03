@@ -1,27 +1,3 @@
-## happy path
-* greet
-  - utter_greet
-* mood_great
-  - utter_happy
-
-## sad path 1
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* affirm
-  - utter_happy
-
-## sad path 2
-* greet
-  - utter_greet
-* mood_unhappy
-  - utter_cheer_up
-  - utter_did_that_help
-* deny
-  - utter_goodbye
-
 ## say goodbye
 * goodbye
   - utter_goodbye
@@ -75,4 +51,23 @@
  - form{"name": null}
 * thank
  - utter_goodbye
- 
+
+## application 1
+* greet
+ - utter_greet
+* apply
+ - utter_application
+* deny
+ - utter_goodbye
+
+## application 2
+* greet
+ - utter_greet
+* apply
+ - utter_application
+* affirm
+* ask_for_form
+ - application_form
+* thank
+ - utter_goodbye
+
