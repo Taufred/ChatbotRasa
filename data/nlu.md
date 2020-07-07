@@ -22,7 +22,7 @@
 - whazzup
 - g'day
 - hiya
-
+- Hi
 
 ## intent:ask_for_opening_hours
 - I would like to know the opening hours
@@ -37,7 +37,6 @@
 - what are your business hours
 - what time do you open
 - how late are you open
-
 
 ## intent:inform_time_and_day
 - when are you open on [Monday](day)?
@@ -57,6 +56,7 @@
 - can I come in the [morning](time_of_day)?
 - are you open on the [5th of July](date)?
 - what are your times on [October 17th](date)?
+- When are you open on [Monday](day)?
 
 ## intent:apply
 - I would like to apply for a job
@@ -65,19 +65,22 @@
 - Can I work here?
 - Where can I apply for a job?
 - Do you have any open positions?
+- I want to apply for a job
 
 ## intent:ask_for_form
 - Do you have a form
 - Can I fill out a form
 - Where can I apply?
 - Where can I submit my application?
+- Please give me the [application](subject) form
+- Please redirect me
 
 ## intent:book_session
 - Can I book an expert session?
 - I would like to talk to an expert
 - Do you have someone that knows more?
 - Who can I talk to about this?
-- I'd like to book a meeting 	
+- I'd like to book a meeting
 
 ## intent:ask_faq
 - Tell me about [AI](subject)
@@ -101,12 +104,10 @@
 - ok thanks!
 - perfect thank you
 - thanks a bunch for everything
-- thanks for the help
 - thanks a lot
 - amazing, thanks
 - cool, thanks
 - cool thank you
-
 
 ## intent:goodbye
 - bye
@@ -125,7 +126,6 @@
 - i'm off
 - see you later alligator
 - we'll speak soon
-
 
 ## intent:affirm
 - yes
@@ -157,7 +157,6 @@
 - noope
 - do you have something else
 - no this does not work for me
-
 
 ## intent:mood_great
 - perfect
