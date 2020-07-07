@@ -116,3 +116,38 @@ class Application_form(FormAction):
 		dispatcher.utter_message("I will redirect you to the application form, if you click [here](https://mindsquare.de/schnellbewerbung-mindsquare/)!")
 		return []
 		
+
+class Book_session_form(FormAction):
+	def name(self) -> Text:
+		return "book_session_form"
+#
+	@staticmethod
+	def required_slots(tracker:Tracker) -> List[Text]:
+		'''A List of required slots that the form has to fill'''
+		return []
+
+	def submit(self, dispatcher: CollectingDispatcher,
+			tracker: Tracker,
+			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		dispatcher.utter_message("I have booked a session for you!")
+		return []
+		
+class FAQ_form(FormAction):
+	def name(self) -> Text:
+		return "faq_form"
+#
+	@staticmethod
+	def required_slots(tracker:Tracker) -> List[Text]:
+		'''A List of required slots that the form has to fill'''
+		return ["subject"]
+
+	def slot_mappings(self) -> Dict[Text, Any]:
+		return {"day": self.from_entity(entity="subject",
+									intent= ["ask_faq"])}
+
+	def submit(self, dispatcher: CollectingDispatcher,
+			tracker: Tracker,
+			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+		subject = tracker.get_slot("subject")
+		dispatcher.utter_message("This is a generic answer about subject: {}. Would you like to book an expert session?".format(subject))
+		return []

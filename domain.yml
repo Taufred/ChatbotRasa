@@ -26,6 +26,8 @@ slots:
     type: text
   time_of_day:
     type: text
+  subject:
+    type: text
 responses:
   utter_greet:
   - text: Hello, I am MindBot! I am here to assist you for any questions you have.
@@ -58,3 +60,5 @@ actions:
 forms:
 - opening_hours_form
 - application_form
+- faq_form
+- book_session_form

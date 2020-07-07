@@ -71,3 +71,13 @@
 * thank
  - utter_goodbye
 
+## book AI expert session 1
+* greet
+ - utter_greet
+* ask_faq{"subject":"AI"}
+ - slot{"subject":"AI"}
+ - faq_form
+* book_session
+ - book_session_form
+* thank
+ - utter_goodbye 
