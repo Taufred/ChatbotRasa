@@ -80,4 +80,57 @@
 * book_session
  - book_session_form
 * thank
- - utter_goodbye 
+ - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* ask_faq{"subject":"AI"}
+    - slot{"subject":"AI"}
+    - faq_form
+    - form{"name":"faq_form"}
+    - slot{"subject":"AI"}
+    - slot{"subject":"AI"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+* book_session
+    - book_session_form
+    - form{"name":"book_session_form"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+* thank
+    - utter_goodbye
+
+## Assistance + Book Session
+* greet
+ - utter_greet
+* ask_assistance
+ - utter_tasks
+* ask_book_session
+ - book_session_form
+* thank
+ - utter_welcome
+* goodbye
+ - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* ask_assistance
+    - utter_tasks
+* book_session
+    - book_session_form
+    - form{"name":"book_session_form"}
+    - form{"name":null}
+    - slot{"requested_slot":null}
+* thank
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## New Story
+
+* chatter
+    - utter_iamabot

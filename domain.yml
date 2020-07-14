@@ -16,6 +16,9 @@ intents:
 - apply
 - book_session
 - ask_for_form
+- ask_assistance
+- chatter
+- ask_book_session
 entities:
 - day
 - time_of_day
@@ -24,9 +27,11 @@ entities:
 slots:
   day:
     type: text
-  time_of_day:
-    type: text
+  requested_slot:
+    type: unfeaturized
   subject:
+    type: text
+  time_of_day:
     type: text
 responses:
   utter_greet:
@@ -48,6 +53,11 @@ responses:
   utter_application:
   - text: Can I answer any questions regarding the application process or redirect
       you to the application form?
+  utter_tasks:
+  - text: I can help you with applying for a job, booking a session with one of our
+      experts or other questions e.g. regarding our opening hours.
+  utter_welcome:
+  - text: You're welcome!
 actions:
 - utter_greet
 - utter_cheer_up
@@ -57,6 +67,9 @@ actions:
 - utter_iamabot
 - utter_ask_time_and_day
 - utter_application
+- form_book_session
+- utter_tasks
+- utter_welcome
 forms:
 - opening_hours_form
 - application_form

@@ -23,6 +23,10 @@
 - g'day
 - hiya
 - Hi
+- Hi!
+- Hallo
+- Hi Bot
+- Hello there
 
 ## intent:ask_for_opening_hours
 - I would like to know the opening hours
@@ -74,6 +78,7 @@
 - Where can I submit my application?
 - Please give me the [application](subject) form
 - Please redirect me
+- [application](subject) form?
 
 ## intent:book_session
 - Can I book an expert session?
@@ -81,6 +86,9 @@
 - Do you have someone that knows more?
 - Who can I talk to about this?
 - I'd like to book a meeting
+- Yes I would like to book a session
+- Can i book a session?
+- I would like to book a session
 
 ## intent:ask_faq
 - Tell me about [AI](subject)
@@ -90,6 +98,7 @@
 - I am interested in [AI](subject)
 - Tell me about the [application process](subject)!
 - How does the [application](subject) work?
+- I want to talk about [AI](subject)
 
 ## intent:thank
 - thank you
@@ -108,6 +117,8 @@
 - amazing, thanks
 - cool, thanks
 - cool thank you
+- Thanks!
+- Thank you!
 
 ## intent:goodbye
 - bye
@@ -126,6 +137,7 @@
 - i'm off
 - see you later alligator
 - we'll speak soon
+- Goodbye :)
 
 ## intent:affirm
 - yes
@@ -185,3 +197,11 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+
+## intent:chatter
+- banana?
+- Banana?
+
+## intent:ask_assistance
+- I need assistance
+- I  need assistance
