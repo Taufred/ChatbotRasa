@@ -3,6 +3,7 @@
 language: "en"
 pipeline:
   - name: WhitespaceTokenizer
+  - name: sentiment_analyzer.SentimentAnalyzer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
