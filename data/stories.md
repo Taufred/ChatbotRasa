@@ -17,7 +17,8 @@
  - form{"name": null}
  - slot{"day":"Monday"}
 * thank
- - utter_goodbye
+ - utter_welcome
+> check_conversation_finish
 
 ## opening hours + day
 * greet
@@ -28,7 +29,8 @@
  - form{"name":"opening_hours_form"}
  - form{"name": null}
 * thank
- - utter_goodbye
+ - utter_welcome
+> check_conversation_finish
 
 ## opening hours + time
 * greet
@@ -38,7 +40,9 @@
  - opening_hours_form
  - form{"name":"opening_hours_form"}
  - form{"name": null}
- - utter_goodbye
+* thank
+ - utter_welcome
+> check_conversation_finish
 
 ## opening hours + time + day
 * greet
@@ -50,7 +54,8 @@
  - form{"name":"opening_hours_form"}
  - form{"name": null}
 * thank
- - utter_goodbye
+ - utter_welcome
+> check_conversation_finish
 
 ## application 1
 * greet
@@ -58,7 +63,7 @@
 * apply
  - utter_application
 * deny
- - utter_goodbye
+> check_conversation_finish
 
 ## application 2
 * greet
@@ -69,7 +74,8 @@
 * ask_for_form
  - application_form
 * thank
- - utter_goodbye
+ - utter_welcome
+> check_conversation_finish
 
 ## book AI expert session 1
 * greet
@@ -80,7 +86,8 @@
 * book_session
  - book_session_form
 * thank
- - utter_goodbye
+ - utter_welcome
+> check_conversation_finish
 
 ## New Story
 
@@ -100,7 +107,8 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 * thank
-    - utter_goodbye
+ - utter_welcome
+> check_conversation_finish
 
 ## Assistance + Book Session
 * greet
@@ -111,8 +119,7 @@
  - book_session_form
 * thank
  - utter_welcome
-* goodbye
- - utter_goodbye
+> check_conversation_finish
 
 ## New Story
 
@@ -126,11 +133,41 @@
     - form{"name":null}
     - slot{"requested_slot":null}
 * thank
-    - utter_welcome
-* goodbye
-    - utter_goodbye
+ - utter_welcome
+> check_conversation_finish
 
 ## New Story
 
 * chatter
     - utter_iamabot
+
+
+## Positive Feedback
+> check_conversation_finish
+    - utter_ask_feedback
+* feedback{"sentiment": "pos"}
+    - slot{"sentiment": "pos"}
+    - action_tag_feedback
+    - utter_thumbsup
+    - utter_anything_else
+
+## Neutral Feedback
+> check_conversation_finish
+    - utter_ask_feedback
+* feedback{"sentiment": "neu"}
+    - slot{"sentiment": "neu"}
+    - action_tag_feedback
+    - utter_thumbsup
+    - utter_anything_else
+
+## Negative Feedback
+> check_conversation_finish
+    - utter_ask_feedback
+* feedback{"sentiment": "neg"}
+    - slot{"sentiment": "neg"}
+    - action_tag_feedback
+    - utter_ask_suggestion
+* suggest
+    - utter_thanks
+    - utter_anything_else
+

@@ -3,6 +3,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
+from rasa_sdk.events import EventType
 import datetime
 import calendar
 import json
@@ -151,3 +152,30 @@ class FAQ_form(FormAction):
 		subject = tracker.get_slot("subject")
 		dispatcher.utter_message("This is a generic answer about subject: {}. Would you like to book an expert session?".format(subject))
 		return []
+
+def tag_convo(tracker: Tracker, label: Text) -> None:
+    """Tag a conversation in Rasa X with a given label"""
+    endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
+    requests.post(url=endpoint, data=label)
+    return
+
+class ActionTagFeedback(Action):
+    """Tag a conversation in Rasa X as positive or negative feedback, save the positive Story. Negative Stories should be reviewed. """
+
+    def name(self):
+        return "action_tag_feedback"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+
+        feedback = tracker.get_slot("sentiment")
+
+        if feedback == "pos":
+            label = '[{"value":"postive feedback","color":"76af3d"}]'
+        elif feedback == "neg":
+            label = '[{"value":"negative feedback","color":"ff0000"}]'
+        else:
+            return []
+
+        tag_convo(tracker, label)
+
+        return []

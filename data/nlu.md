@@ -208,3 +208,26 @@
 ## intent:ask_assistance
 - I need assistance
 - I  need assistance
+
+## intent:feedback
+- It was good
+- Pretty bad
+- It was okay
+- I liked it
+- Loved it!
+- Pretty Great!
+- It was meh
+- Not really nice
+- Pretty shite
+- You are useless.
+- Kind of useful
+- It helped a little bit
+- It helped a lot
+- I didn't like it
+- I didn't love it
+- Super nice
+
+## intent:suggest:
+- You could do this better
+- Improve on this
+- Do something

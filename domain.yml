@@ -19,11 +19,14 @@ intents:
 - ask_assistance
 - chatter
 - ask_book_session
+- feedback
+- suggest
 entities:
 - day
 - time_of_day
 - date
 - subject
+- sentiment
 slots:
   day:
     type: text
@@ -33,6 +36,12 @@ slots:
     type: text
   time_of_day:
     type: text
+  sentiment:
+    type: categorical
+    values:
+    - positive
+    - neutral
+    - negative
 responses:
   utter_greet:
   - text: Hello, I am MindBot! I am here to assist you for any questions you have.
@@ -58,6 +67,16 @@ responses:
       experts or other questions e.g. regarding our opening hours.
   utter_welcome:
   - text: You're welcome!
+  utter_ask_feedback:
+  - text: I hope, that I could help you. How satisfied are you with this conversation?
+  utter_thumbsup:
+  - text: (y)
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
+  utter_thanks:
+  - text: Thank you.
+  utter_ask_suggestion:
+  - text: What improvements would you like to suggest?
 actions:
 - utter_greet
 - utter_cheer_up
@@ -67,9 +86,14 @@ actions:
 - utter_iamabot
 - utter_ask_time_and_day
 - utter_application
-- form_book_session
 - utter_tasks
 - utter_welcome
+- utter_ask_feedback
+- utter_thumbsup
+- utter_anything_else
+- utter_thanks
+- utter_ask_suggestion
+- action_tag_feedback
 forms:
 - opening_hours_form
 - application_form
