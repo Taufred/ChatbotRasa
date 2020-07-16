@@ -138,6 +138,7 @@
 - see you later alligator
 - we'll speak soon
 - Goodbye :)
+- Goodbye
 
 ## intent:affirm
 - yes
@@ -179,6 +180,7 @@
 - I am feeling very good
 - I am great
 - I'm good
+- I am happy
 
 ## intent:mood_unhappy
 - sad
@@ -201,6 +203,7 @@
 ## intent:chatter
 - banana?
 - Banana?
+- I like you
 
 ## intent:ask_assistance
 - I need assistance
