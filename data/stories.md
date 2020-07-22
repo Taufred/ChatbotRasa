@@ -90,7 +90,6 @@
 > check_conversation_finish
 
 ## New Story
-
 * greet
     - utter_greet
 * ask_faq{"subject":"AI"}
@@ -122,7 +121,6 @@
 > check_conversation_finish
 
 ## New Story
-
 * greet
     - utter_greet
 * ask_assistance
@@ -137,7 +135,6 @@
 > check_conversation_finish
 
 ## New Story
-
 * chatter
     - utter_iamabot
 

@@ -4,9 +4,17 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import EventType
-import datetime
+from rasa.core.trackers import DialogueStateTracker
+from rasa.core.events import (
+    UserUttered, ActionExecuted,
+    Event, SlotSet, Restarted, ActionReverted, UserUtteranceReverted,
+    BotUttered, Form)
+from rasa.core import events
 import calendar
 import json
+import io
+import os
+import requests
 #
 #
 #
@@ -155,9 +163,11 @@ class FAQ_form(FormAction):
 
 def tag_convo(tracker: Tracker, label: Text) -> None:
     """Tag a conversation in Rasa X with a given label"""
-    endpoint = f"http://{config.rasa_x_host}/api/conversations/{tracker.sender_id}/tags"
+    config = os.environ.get("RASA_X_HOST", "rasa-x:5002")
+    endpoint = f"http://{config}/api/conversations/{tracker.sender_id}/tags"
     requests.post(url=endpoint, data=label)
     return
+
 
 class ActionTagFeedback(Action):
     """Tag a conversation in Rasa X as positive or negative feedback, save the positive Story. Negative Stories should be reviewed. """
@@ -166,16 +176,17 @@ class ActionTagFeedback(Action):
         return "action_tag_feedback"
 
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
+    	
 
         feedback = tracker.get_slot("sentiment")
 
         if feedback == "pos":
-            label = '[{"value":"postive feedback","color":"76af3d"}]'
+        	label = '[{"value":"postive feedback","color":"76af3d"}]'
+        	#export_stories_to_file(tracker.events,tracker.sender_id,export_path="./data/stories.md")
         elif feedback == "neg":
             label = '[{"value":"negative feedback","color":"ff0000"}]'
         else:
-            return []
-
+        	return []
         tag_convo(tracker, label)
 
         return []

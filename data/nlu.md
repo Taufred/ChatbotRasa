@@ -227,7 +227,13 @@
 - I didn't love it
 - Super nice
 
-## intent:suggest:
+## intent:suggest
 - You could do this better
 - Improve on this
 - Do something
+
+## intent:out_of_scope
+- suhidbf
+- 143dw
+- bwahaah
+- generliok

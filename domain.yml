@@ -21,6 +21,7 @@ intents:
 - ask_book_session
 - feedback
 - suggest
+- out_of_scope
 entities:
 - day
 - time_of_day
@@ -32,16 +33,16 @@ slots:
     type: text
   requested_slot:
     type: unfeaturized
-  subject:
-    type: text
-  time_of_day:
-    type: text
   sentiment:
     type: categorical
     values:
     - positive
     - neutral
     - negative
+  subject:
+    type: text
+  time_of_day:
+    type: text
 responses:
   utter_greet:
   - text: Hello, I am MindBot! I am here to assist you for any questions you have.
@@ -77,6 +78,8 @@ responses:
   - text: Thank you.
   utter_ask_suggestion:
   - text: What improvements would you like to suggest?
+  utter_default:
+  - text: I am not sure I understood. Can you rephrase your question?
 actions:
 - utter_greet
 - utter_cheer_up
@@ -94,6 +97,7 @@ actions:
 - utter_thanks
 - utter_ask_suggestion
 - action_tag_feedback
+- utter_default
 forms:
 - opening_hours_form
 - application_form
