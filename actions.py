@@ -117,7 +117,7 @@ class Application_form(FormAction):
 	def submit(self, dispatcher: CollectingDispatcher,
 			tracker: Tracker,
 			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		dispatcher.utter_message("I will redirect you to the application form, if you click [here](https://mindsquare.de/schnellbewerbung-mindsquare/)!")
+		dispatcher.utter_message("I will redirect you to the application form, if you click [here](https://notare.al/application_form)!")
 		return []
 		
 
