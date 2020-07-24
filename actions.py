@@ -4,12 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import EventType
-from rasa.core.trackers import DialogueStateTracker
-from rasa.core.events import (
-    UserUttered, ActionExecuted,
-    Event, SlotSet, Restarted, ActionReverted, UserUtteranceReverted,
-    BotUttered, Form)
-from rasa.core import events
+
 import calendar
 import json
 import io
@@ -163,7 +158,8 @@ class FAQ_form(FormAction):
 
 def tag_convo(tracker: Tracker, label: Text) -> None:
     """Tag a conversation in Rasa X with a given label"""
-    config = os.environ.get("RASA_X_HOST", "rasa-x:5002")
+    #config = os.environ.get("RASA_X_HOST", "rasa-x:5002")
+    config = os.environ.get("RASA_X_HOST", "localhost:5002")
     endpoint = f"http://{config}/api/conversations/{tracker.sender_id}/tags"
     requests.post(url=endpoint, data=label)
     return
