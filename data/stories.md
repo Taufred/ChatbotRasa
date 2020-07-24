@@ -16,6 +16,7 @@
  - form{"name":"opening_hours_form"}
  - form{"name": null}
  - slot{"day":"Monday"}
+ - slot{"time_of_day": None}
 * thank
  - utter_welcome
 > check_conversation_finish
@@ -28,6 +29,7 @@
  - opening_hours_form
  - form{"name":"opening_hours_form"}
  - form{"name": null}
+ - slot{"time_of_day": None}
 * thank
  - utter_welcome
 > check_conversation_finish
@@ -40,6 +42,7 @@
  - opening_hours_form
  - form{"name":"opening_hours_form"}
  - form{"name": null}
+ - slot{"time_of_day": None}
 * thank
  - utter_welcome
 > check_conversation_finish
@@ -53,6 +56,7 @@
  - opening_hours_form
  - form{"name":"opening_hours_form"}
  - form{"name": null}
+ - slot{"time_of_day": None}
 * thank
  - utter_welcome
 > check_conversation_finish

@@ -3,10 +3,13 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import EventType
+from rasa_sdk.events import EventType, SlotSet
 
 import calendar
 import json
+import io
+import os
+import requests
 #
 #
 #
@@ -60,7 +63,10 @@ def find_opening_hours(day, time_of_day):
 			opening_hours = opening_hours["morning"]
 		elif time_of_day.lower() in evening:
 			opening_hours = opening_hours["evening"]
-	return str(opening_hours)
+		result = str(opening_hours)
+	else:
+		result = "{} and {}".format(opening_hours["morning"],opening_hours["evening"])
+	return result
 
 
 class Opening_Hours_Form(FormAction):
@@ -100,7 +106,7 @@ class Opening_Hours_Form(FormAction):
 			dispatcher.utter_message("These are the opening hours on {}: ".format(day_name)+results)
 		else:
 			dispatcher.utter_message("These are the opening hours on {} in the {}: ".format(day_name,time_of_day)+results)
-		return []
+		return [SlotSet("time_of_day", None)]
 
 class Application_form(FormAction):
 	def name(self) -> Text:
@@ -152,3 +158,4 @@ class FAQ_form(FormAction):
 		subject = tracker.get_slot("subject")
 		dispatcher.utter_message("This is a generic answer about subject: {}. Would you like to book an expert session?".format(subject))
 		return []
+
