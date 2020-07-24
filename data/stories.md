@@ -139,32 +139,10 @@
     - utter_iamabot
 
 
-## Positive Feedback
+## Feedback
 > check_conversation_finish
     - utter_ask_feedback
-* feedback{"sentiment": "pos"}
-    - slot{"sentiment": "pos"}
-    - action_tag_feedback
+* feedback
     - utter_thumbsup
-    - utter_anything_else
-
-## Neutral Feedback
-> check_conversation_finish
-    - utter_ask_feedback
-* feedback{"sentiment": "neu"}
-    - slot{"sentiment": "neu"}
-    - action_tag_feedback
-    - utter_thumbsup
-    - utter_anything_else
-
-## Negative Feedback
-> check_conversation_finish
-    - utter_ask_feedback
-* feedback{"sentiment": "neg"}
-    - slot{"sentiment": "neg"}
-    - action_tag_feedback
-    - utter_ask_suggestion
-* suggest
-    - utter_thanks
     - utter_anything_else
 

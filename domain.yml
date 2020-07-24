@@ -33,12 +33,6 @@ slots:
     type: text
   requested_slot:
     type: unfeaturized
-  sentiment:
-    type: categorical
-    values:
-    - positive
-    - neutral
-    - negative
   subject:
     type: text
   time_of_day:
@@ -96,7 +90,6 @@ actions:
 - utter_anything_else
 - utter_thanks
 - utter_ask_suggestion
-- action_tag_feedback
 - utter_default
 forms:
 - opening_hours_form
