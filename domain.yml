@@ -13,27 +13,44 @@ intents:
 - inform_time_and_day
 - thank
 - ask_faq
+- ask_more
 - apply
-- book_session
 - ask_for_form
 - ask_assistance
 - chatter
-- ask_book_session
+- book_session
 - feedback
 - suggest
 - out_of_scope
+- state_name
+- state_e-mail
+- state_day
+- state_slot
 entities:
 - day
 - time_of_day
 - date
 - subject
 - sentiment
+- e-mail
+- name
+- time-slot
+- '"name"'
+- '"e-mail"'
+- '"time-slot"'
+- '"day"'
 slots:
   day:
+    type: text
+  e-mail:
+    type: text
+  name:
     type: text
   requested_slot:
     type: unfeaturized
   subject:
+    type: text
+  time-slot:
     type: text
   time_of_day:
     type: text
@@ -74,6 +91,14 @@ responses:
   - text: What improvements would you like to suggest?
   utter_default:
   - text: I am not sure I understood. Can you rephrase your question?
+  utter_ask_book_session:
+  - text: Perhaps you would like to speak with one of our experts. We offer special
+      expert session in which all of your questions can be answered. Should I book
+      one for you?
+  utter_ask_name:
+  - text: Who should I book the session for? Please state a name.
+  utter_ask_e-mail:
+  - text: I would also need an e-mail adress from you.
 actions:
 - utter_greet
 - utter_cheer_up
@@ -91,8 +116,13 @@ actions:
 - utter_thanks
 - utter_ask_suggestion
 - utter_default
+- utter_ask_book_session
+- utter_ask_name
+- utter_ask_e-mail
 forms:
 - opening_hours_form
 - application_form
 - faq_form
+- find_days_form
+- find_slots_form
 - book_session_form

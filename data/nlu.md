@@ -91,14 +91,14 @@
 - I would like to book a session
 
 ## intent:ask_faq
-- Tell me about [AI](subject)
-- What do you know about [AI](subject)?
-- what is [artificial intelligence](subject)?
-- How can I use [AI](subject)?
-- I am interested in [AI](subject)
-- Tell me about the [application process](subject)!
-- How does the [application](subject) work?
-- I want to talk about [AI](subject)
+- Tell me about [AI](subject:AI)
+- What do you know about [AI](subject:AI)?
+- what is [artificial intelligence](subject:AI)?
+- How can I use [AI](subject:AI)?
+- I am interested in [AI](subject:AI)
+- Tell me about the [application process](subject:apply)!
+- How does the [application](subject:apply) work?
+- I want to talk about [AI](subject:AI)
 
 ## intent:thank
 - thank you
@@ -237,3 +237,42 @@
 - 143dw
 - bwahaah
 - generliok
+
+## intent:ask_more
+- Can you tell me more?
+- I would like to know more about that!
+- Can you tell me more about that subject?
+- Please explain in more detail!
+- Anything else?
+- What is that all about?
+- Can you specify?
+
+## intent:state_name
+- My name is [Name Nameson]("name")
+- Call me [Jonas]("name")
+- Book it under [mindsquare]("name")
+- I am called [Dr. Dresner]("name")
+- [Mats Hummels]("name")
+- I am [Gregor Braginson]("name")
+- The name is [Schweitzer]("name")
+
+## intent:state_e-mail
+- [name@name.son]("e-mail")
+- My mail is [some@thing.com]("e-mail")
+- my adress is [this@isama.il]("e-mail")
+- Send a mail to [brit@ney.de]("e-mail")
+- Please use [thisverylong@mail.com]("e-mail")
+
+## intent:state_day
+- How about [Friday]("day")
+- [Monday]("day") would suit me best
+- [Thursday]("day") sounds good!
+- I could do [Wednesday]("day")
+- I'm thinking about [Tuesday]("day")
+
+## intent:state_slot
+- Slot [1]("time-slot") please
+- I'd like to book slot [2]("time-slot")
+- Number [3]("time-slot")
+- Please reserve [4]("time-slot")
+- [5]("time-slot")
