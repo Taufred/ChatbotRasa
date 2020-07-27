@@ -267,41 +267,41 @@
 - give me an anwer
 
 ## intent:state_name
-- My name is [Name Nameson]("name")
-- Call me [Jonas]("name")
-- Book it under [mindsquare]("name")
-- I am called [Dr. Dresner]("name")
-- [Mats Hummels]("name")
-- I am [Gregor Braginson]("name")
-- The name is [Schweitzer]("name")
+- My name is [Name Nameson](name)
+- Call me [Jonas](name)
+- Book it under [mindsquare](name)
+- I am called [Dr. Dresner](name)
+- [Mats Hummels](name)
+- I am [Gregor Braginson](name)
+- The name is [Schweitzer](name)
 - my name is Jan
-- My name is [Jan]("name")
-- My name is [Jan]("name") Feldmann
+- My name is [Jan](name)
+- My name is [Jan](name) Feldmann
 
 ## intent:state_e-mail
-- [name@name.son]("e-mail")
-- My mail is [some@thing.com]("e-mail")
-- my adress is [this@isama.il]("e-mail")
-- Send a mail to [brit@ney.de]("e-mail")
-- Please use [thisverylong@mail.com]("e-mail")
-- [jan@ms.de]("e-mail")
-- my email adress is : [jan@ms.de]("e-mail")
-- [jan.feldmann@mindsquare.de]("name")
+- [name@name.son](e-mail)
+- My mail is [some@thing.com](e-mail)
+- my adress is [this@isama.il](e-mail)
+- Send a mail to [brit@ney.de](e-mail)
+- Please use [thisverylong@mail.com](e-mail)
+- [jan@ms.de](e-mail)
+- my email adress is : [jan@ms.de](e-mail)
+- [jan.feldmann@mindsquare.de](name)
 
 ## intent:state_day
-- How about [Friday]("day")
-- [Monday]("day") would suit me best
-- [Thursday]("day") sounds good!
-- I could do [Wednesday]("day")
-- I'm thinking about [Tuesday]("day")
+- How about [Friday](day)
+- [Monday](day) would suit me best
+- [Thursday](day) sounds good!
+- I could do [Wednesday](day)
+- I'm thinking about [Tuesday](day)
 - [monday](day)
 
 ## intent:state_slot
-- Slot [1]("time-slot") please
-- I'd like to book slot [2]("time-slot")
-- Number [3]("time-slot")
-- Please reserve [4]("time-slot")
-- [5]("time-slot")
+- Slot [1](time-slot) please
+- I'd like to book slot [2](time-slot)
+- Number [3](time-slot)
+- Please reserve [4](time-slot)
+- [5](time-slot)
 
 ## synonym:AI
 - artificial intelligence

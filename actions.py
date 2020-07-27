@@ -159,7 +159,7 @@ class FAQ_form(FormAction):
 			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		subject = tracker.get_slot("subject")
 		if subject == "AI":
-			dispatcher.utter_message("AI describes machines, which, by the use of algorithms, solve tasks autonomously and adaptively. If you want to know more about this subject, I can help you book an exper session! Would you like to book one?")
+			dispatcher.utter_message("AI describes machines, which, by the use of algorithms, solve tasks autonomously and adaptively. If you want to know more about this subject, I can help you book an expert session! Would you like to book one?")
 		if subject == "apply":
 			dispatcher.utter_message("You can apply by filling in your details on our website. It will be read by our personnel and you will get an answer after a couple of days! Should I redirect you to the application form?")
 		else:
