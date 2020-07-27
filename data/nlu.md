@@ -27,6 +27,7 @@
 - Hallo
 - Hi Bot
 - Hello there
+- h
 
 ## intent:ask_for_opening_hours
 - I would like to know the opening hours
@@ -61,6 +62,9 @@
 - are you open on the [5th of July](date)?
 - what are your times on [October 17th](date)?
 - When are you open on [Monday](day)?
+- When are you open on [monday](day)?
+- [tomorrow](day)
+- How late you open [tomorrow](day)?
 
 ## intent:apply
 - I would like to apply for a job
@@ -79,6 +83,7 @@
 - Please give me the [application](subject) form
 - Please redirect me
 - [application](subject) form?
+- where can I apply
 
 ## intent:book_session
 - Can I book an expert session?
@@ -89,16 +94,21 @@
 - Yes I would like to book a session
 - Can i book a session?
 - I would like to book a session
+- I'd like to book a sessin
+- I'd like to book a session
+- I want to book an expert session
+- I would like to book one!
 
 ## intent:ask_faq
-- Tell me about [AI](subject:AI)
-- What do you know about [AI](subject:AI)?
-- what is [artificial intelligence](subject:AI)?
-- How can I use [AI](subject:AI)?
-- I am interested in [AI](subject:AI)
-- Tell me about the [application process](subject:apply)!
-- How does the [application](subject:apply) work?
-- I want to talk about [AI](subject:AI)
+- Tell me about [AI](subject)
+- What do you know about [AI](subject)?
+- what is [artificial intelligence]{"entity": "subject", "value": "AI"}?
+- How can I use [AI](subject)?
+- I am interested in [AI](subject)
+- Tell me about the [application process]{"entity": "subject", "value": "apply"}!
+- How does the [application]{"entity": "subject", "value": "apply"} work?
+- I want to talk about [AI](subject)
+- What can you tell me about [AI](subject)?
 
 ## intent:thank
 - thank you
@@ -119,6 +129,7 @@
 - cool thank you
 - Thanks!
 - Thank you!
+- Thank you
 
 ## intent:goodbye
 - bye
@@ -173,7 +184,6 @@
 
 ## intent:mood_great
 - perfect
-- very good
 - great
 - amazing
 - wonderful
@@ -181,6 +191,31 @@
 - I am great
 - I'm good
 - I am happy
+
+## intent:feedback
+- very good
+- It was good
+- Pretty bad
+- It was okay
+- I liked it
+- Loved it!
+- Pretty Great!
+- It was meh
+- Not really nice
+- Pretty shite
+- You are useless.
+- Kind of useful
+- It helped a little bit
+- It helped a lot
+- I didn't like it
+- I didn't love it
+- Super nice
+- you are useless
+- excellent
+- It was nice
+- It was super nice
+- very
+- nice
 
 ## intent:mood_unhappy
 - sad
@@ -208,24 +243,7 @@
 ## intent:ask_assistance
 - I need assistance
 - I  need assistance
-
-## intent:feedback
-- It was good
-- Pretty bad
-- It was okay
-- I liked it
-- Loved it!
-- Pretty Great!
-- It was meh
-- Not really nice
-- Pretty shite
-- You are useless.
-- Kind of useful
-- It helped a little bit
-- It helped a lot
-- I didn't like it
-- I didn't love it
-- Super nice
+- What can you do?
 
 ## intent:suggest
 - You could do this better
@@ -246,6 +264,7 @@
 - Anything else?
 - What is that all about?
 - Can you specify?
+- give me an anwer
 
 ## intent:state_name
 - My name is [Name Nameson]("name")
@@ -255,6 +274,9 @@
 - [Mats Hummels]("name")
 - I am [Gregor Braginson]("name")
 - The name is [Schweitzer]("name")
+- my name is Jan
+- My name is [Jan]("name")
+- My name is [Jan]("name") Feldmann
 
 ## intent:state_e-mail
 - [name@name.son]("e-mail")
@@ -262,6 +284,9 @@
 - my adress is [this@isama.il]("e-mail")
 - Send a mail to [brit@ney.de]("e-mail")
 - Please use [thisverylong@mail.com]("e-mail")
+- [jan@ms.de]("e-mail")
+- my email adress is : [jan@ms.de]("e-mail")
+- [jan.feldmann@mindsquare.de]("name")
 
 ## intent:state_day
 - How about [Friday]("day")
@@ -269,6 +294,7 @@
 - [Thursday]("day") sounds good!
 - I could do [Wednesday]("day")
 - I'm thinking about [Tuesday]("day")
+- [monday](day)
 
 ## intent:state_slot
 - Slot [1]("time-slot") please
@@ -276,3 +302,10 @@
 - Number [3]("time-slot")
 - Please reserve [4]("time-slot")
 - [5]("time-slot")
+
+## synonym:AI
+- artificial intelligence
+
+## synonym:apply
+- application process
+- application
