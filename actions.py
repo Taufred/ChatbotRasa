@@ -7,13 +7,9 @@ from rasa_sdk.events import EventType, SlotSet
 
 import calendar
 import json
-import io
-import os
-import requests
-#
-#
-#
 
+
+# BACKGROUND DATA - SHOULD BE STORED IN A DATABASE OR RETRIEVED FROM A SERVER
 morning = ["morning", "noon"]
 evening = ["evening", "afternoon", "night"]
 
@@ -50,14 +46,19 @@ OPENING_HOURS = {
 }
 
 
+#Returns the opening hours for a specific day or even time of day
 def find_opening_hours(day, time_of_day):
+	#Find out the number that belongs to the day
 	days = []
 	for day_name in calendar.day_name:
 		days.append(day_name.lower())
 	days = dict(zip(days, range(7))); 
 	day_nr = days[day.lower()]
+
+	#retrieve the opening hours from that number
 	opening_hours = OPENING_HOURS[day_nr]
 
+	#optionally return only one part of the hours
 	if time_of_day!=None:
 		if time_of_day.lower() in morning:
 			opening_hours = opening_hours["morning"]
@@ -68,7 +69,7 @@ def find_opening_hours(day, time_of_day):
 		result = "{} and {}".format(opening_hours["morning"],opening_hours["evening"])
 	return result
 
-
+#Action deals with any question by replying with the opening hours
 class Opening_Hours_Form(FormAction):
 #
 	def name(self) -> Text:
@@ -86,7 +87,7 @@ class Opening_Hours_Form(FormAction):
 	def submit(self, dispatcher: CollectingDispatcher,
 			tracker: Tracker,
 			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
+		#retrieve
 		day = tracker.get_slot("day")
 		if day.lower() == "today" or day.lower() == "tonight":
 			my_date = date.today()

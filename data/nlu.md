@@ -30,6 +30,7 @@
 - h
 - hello friend
 - Good morning, bot!
+- Howdy bot
 
 ## intent:ask_for_opening_hours
 - I would like to know the opening hours
@@ -126,6 +127,7 @@
 - What [degree](subject) do I need?
 - What is the [salary](subject)?
 - How much does it [pay]{"entity": "subject", "value": "salary"}?
+- How much does a job at [mindsquare](name) [pay]{"entity": "subject", "value": "salary"}?
 
 ## intent:thank
 - thank you
@@ -148,6 +150,7 @@
 - Thank you!
 - Thank you
 - Thanks my friend!
+- Insane, bud!
 
 ## intent:goodbye
 - bye
@@ -188,6 +191,7 @@
 - ok
 - okay
 - Yes please
+- Hell yeah!
 
 ## intent:deny
 - no
@@ -203,6 +207,7 @@
 - noope
 - do you have something else
 - no this does not work for me
+- Nah, I'm good.
 
 ## intent:mood_great
 - perfect
@@ -243,6 +248,7 @@
 - 10/10
 - 8/10
 - 8/8 it was gr8 m8
+- It was terrific!
 
 ## intent:mood_unhappy
 - sad
@@ -333,9 +339,13 @@
 - ai
 - KI
 
-## synonym:
-
 ## synonym:apply
 - application process
 - application
 - apply
+
+## synonym:degree
+- diploma
+
+## synonym:salary
+- pay

@@ -19,10 +19,6 @@ actions:
 - utter_thumbsup
 - utter_welcome
 entities:
-- '"day"'
-- '"e-mail"'
-- '"name"'
-- '"time-slot"'
 - date
 - day
 - e-mail
@@ -39,9 +35,12 @@ forms:
 - find_slots_form
 - opening_hours_form
 intents:
-- ask_faq
+- feedback
 - affirm
+- thank
 - greet
+- ask_faq
+- deny
 - apply
 - inform_time_and_day
 - goodbye
@@ -49,9 +48,7 @@ intents:
 - state_name
 - book_session
 - state_slot
-- thank
 - state_e-mail
-- deny
 - mood_great
 - mood_unhappy
 - bot_challenge
@@ -59,7 +56,6 @@ intents:
 - ask_for_form
 - ask_assistance
 - chatter
-- feedback
 - suggest
 - out_of_scope
 - state_day

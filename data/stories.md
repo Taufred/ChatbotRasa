@@ -376,3 +376,29 @@
     - utter_goodbye
 >check_conversation_finish
 
+
+## interactive_story_4
+* greet
+    - utter_greet
+* ask_faq{"name": "mindsquare", "subject": "salary"}
+    - slot{"name": "mindsquare"}
+    - slot{"subject": "salary"}
+    - faq_form
+    - form{"name": "faq_form"}
+    - slot{"subject": "salary"}
+    - slot{"subject": "salary"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* affirm
+    - application_form
+    - form{"name": "application_form"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* thank
+    - utter_welcome
+    - utter_ask_feedback
+* feedback
+    - utter_thumbsup
+    - utter_anything_else
+* deny
+    - utter_goodbye
