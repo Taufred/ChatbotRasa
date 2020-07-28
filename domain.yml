@@ -1,44 +1,116 @@
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+actions:
+- utter_anything_else
+- utter_application
+- utter_ask_book_session
+- utter_ask_e-mail
+- utter_ask_feedback
+- utter_ask_name
+- utter_ask_suggestion
+- utter_ask_time_and_day
+- utter_cheer_up
+- utter_default
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_tasks
+- utter_thanks
+- utter_thumbsup
+- utter_welcome
+entities:
+- '"day"'
+- '"e-mail"'
+- '"name"'
+- '"time-slot"'
+- date
+- day
+- e-mail
+- name
+- sentiment
+- subject
+- time-slot
+- time_of_day
+forms:
+- application_form
+- book_session_form
+- faq_form
+- find_days_form
+- find_slots_form
+- opening_hours_form
 intents:
-- greet
-- goodbye
+- ask_faq
 - affirm
+- greet
+- apply
+- inform_time_and_day
+- goodbye
+- ask_more
+- state_name
+- book_session
+- state_slot
+- thank
+- state_e-mail
 - deny
 - mood_great
 - mood_unhappy
 - bot_challenge
 - ask_for_opening_hours
-- inform_time_and_day
-- thank
-- ask_faq
-- ask_more
-- apply
 - ask_for_form
 - ask_assistance
 - chatter
-- book_session
 - feedback
 - suggest
 - out_of_scope
-- state_name
-- state_e-mail
 - state_day
-- state_slot
-entities:
-- day
-- time_of_day
-- date
-- subject
-- sentiment
-- e-mail
-- name
-- time-slot
-- '"name"'
-- '"e-mail"'
-- '"time-slot"'
-- '"day"'
+responses:
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
+  utter_application:
+  - text: Can I answer any questions regarding the application process or redirect
+      you to the application form?
+  utter_ask_book_session:
+  - text: Perhaps you would like to speak with one of our experts. We offer special
+      expert session in which all of your questions can be answered. Should I book
+      one for you?
+  utter_ask_e-mail:
+  - text: I would also need an e-mail adress from you.
+  utter_ask_feedback:
+  - text: I hope, that I could help you. How satisfied are you with this conversation?
+  utter_ask_name:
+  - text: Who should I book the session for? Please state a name.
+  utter_ask_suggestion:
+  - text: What improvements would you like to suggest?
+  utter_ask_time_and_day:
+  - text: For which day would you like to know the opening hours?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_default:
+  - text: I am not sure I understood. Can you rephrase your question?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Goodbye, it was nice talking to you!
+  - text: Goodbye!
+  utter_greet:
+  - text: Hello, I am MindBot! I am here to assist you for any questions you have.
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_tasks:
+  - text: I can help you with applying for a job, booking a session with one of our
+      experts or other questions e.g. regarding our opening hours.
+  utter_thanks:
+  - text: Thank you.
+  utter_thumbsup:
+  - text: (y)
+  utter_welcome:
+  - text: You're welcome!
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
 slots:
   day:
     type: text
@@ -54,75 +126,3 @@ slots:
     type: text
   time_of_day:
     type: text
-responses:
-  utter_greet:
-  - text: Hello, I am MindBot! I am here to assist you for any questions you have.
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
-  utter_goodbye:
-  - text: Goodbye, it was nice talking to you!
-  - text: Goodbye!
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_ask_time_and_day:
-  - text: For which day would you like to know the opening hours?
-  utter_application:
-  - text: Can I answer any questions regarding the application process or redirect
-      you to the application form?
-  utter_tasks:
-  - text: I can help you with applying for a job, booking a session with one of our
-      experts or other questions e.g. regarding our opening hours.
-  utter_welcome:
-  - text: You're welcome!
-  utter_ask_feedback:
-  - text: I hope, that I could help you. How satisfied are you with this conversation?
-  utter_thumbsup:
-  - text: (y)
-  utter_anything_else:
-  - text: Is there anything else I can help you with?
-  utter_thanks:
-  - text: Thank you.
-  utter_ask_suggestion:
-  - text: What improvements would you like to suggest?
-  utter_default:
-  - text: I am not sure I understood. Can you rephrase your question?
-  utter_ask_book_session:
-  - text: Perhaps you would like to speak with one of our experts. We offer special
-      expert session in which all of your questions can be answered. Should I book
-      one for you?
-  utter_ask_name:
-  - text: Who should I book the session for? Please state a name.
-  utter_ask_e-mail:
-  - text: I would also need an e-mail adress from you.
-actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
-- utter_ask_time_and_day
-- utter_application
-- utter_tasks
-- utter_welcome
-- utter_ask_feedback
-- utter_thumbsup
-- utter_anything_else
-- utter_thanks
-- utter_ask_suggestion
-- utter_default
-- utter_ask_book_session
-- utter_ask_name
-- utter_ask_e-mail
-forms:
-- opening_hours_form
-- application_form
-- faq_form
-- find_days_form
-- find_slots_form
-- book_session_form

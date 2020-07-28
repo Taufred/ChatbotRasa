@@ -131,7 +131,7 @@ class Book_session_form(FormAction):
 	@staticmethod
 	def required_slots(tracker:Tracker) -> List[Text]:
 		'''A List of required slots that the form has to fill'''
-		return ["name","e-mail","day","time_slot"]
+		return ["name","e-mail","day","time-slot"]
 
 	def submit(self, dispatcher: CollectingDispatcher,
 			tracker: Tracker,
@@ -160,8 +160,12 @@ class FAQ_form(FormAction):
 		subject = tracker.get_slot("subject")
 		if subject == "AI":
 			dispatcher.utter_message("AI describes machines, which, by the use of algorithms, solve tasks autonomously and adaptively. If you want to know more about this subject, I can help you book an expert session! Would you like to book one?")
-		if subject == "apply":
+		elif subject == "apply":
 			dispatcher.utter_message("You can apply by filling in your details on our website. It will be read by our personnel and you will get an answer after a couple of days! Should I redirect you to the application form?")
+		elif subject == "degree":
+			dispatcher.utter_message("To work at this firm you need to at least have completed one bachelor's study in an IT-field! Data Science and AI students are welcome as well. Should I redirect you to the application form?")
+		elif subject == "salary":
+			dispatcher.utter_message("The salary highly depends on the specific function you are applying for. I suggest checking the details on the application form. Should I redirect you to the application form?")
 		else:
 			dispatcher.utter_message("I do not know anything about {}. Would you like to book an expert session?".format(subject))
 		return []
@@ -213,12 +217,12 @@ class Find_slots_form(FormAction):
 		e_mail = tracker.get_slot("e-mail")
 		day = tracker.get_slot("day")
 		if day == "Monday" or day == "monday":
-			dispatcher.utter_message("We have slots available at 10:15, 11:00 and 11:45 for you on {}, {}".format(day, name))
+			dispatcher.utter_message("We have slots available at [1] 10:15, [2] 11:00 and [3] 11:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
 		elif day == "Tuesday" or day == "tuesday":
-			dispatcher.utter_message("We have slots available at 9:15, 10:10 and 12:45 for you on {}, {}".format(day, name))
+			dispatcher.utter_message("We have slots available at [1] 9:15, [2] 10:10 and [3] 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
 		elif day == "Friday" or day == "friday":
-			dispatcher.utter_message("We have slots available at 10:15, 11:15 and 12:45 for you on {}, {}".format(day, name))
+			dispatcher.utter_message("We have slots available at [1] 10:15, [2] 11:15 and [3] 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
 		else:
-			dispatcher.utter_message("Sorry, please select one of the avilable days.")
+			dispatcher.utter_message("Sorry, please select one of the available days.")
 			return[SlotSet("day", None)]
 		return []

@@ -28,6 +28,8 @@
 - Hi Bot
 - Hello there
 - h
+- hello friend
+- Good morning, bot!
 
 ## intent:ask_for_opening_hours
 - I would like to know the opening hours
@@ -65,6 +67,14 @@
 - When are you open on [monday](day)?
 - [tomorrow](day)
 - How late you open [tomorrow](day)?
+- How about [Friday](day)
+- [Monday](day) would suit me best
+- [Thursday](day) sounds good!
+- I could do [Wednesday](day)
+- I'm thinking about [Tuesday](day)
+- [monday](day)
+- How about [Tuesday](day)?
+- When are you open on [Friday](day) [night](time_of_day)?
 
 ## intent:apply
 - I would like to apply for a job
@@ -109,6 +119,13 @@
 - How does the [application]{"entity": "subject", "value": "apply"} work?
 - I want to talk about [AI](subject)
 - What can you tell me about [AI](subject)?
+- How can I [apply](subject) for a job her?
+- Do I need a masters [degree](subject)?
+- Do I need a bachelors [degree](subject)?
+- Do I need a [diploma]{"entity": "subject", "value": "degree"}?
+- What [degree](subject) do I need?
+- What is the [salary](subject)?
+- How much does it [pay]{"entity": "subject", "value": "salary"}?
 
 ## intent:thank
 - thank you
@@ -130,6 +147,7 @@
 - Thanks!
 - Thank you!
 - Thank you
+- Thanks my friend!
 
 ## intent:goodbye
 - bye
@@ -150,6 +168,9 @@
 - we'll speak soon
 - Goodbye :)
 - Goodbye
+- bye bot!
+- Alright then!
+- Alright then, keep your secrets
 
 ## intent:affirm
 - yes
@@ -166,6 +187,7 @@
 - si
 - ok
 - okay
+- Yes please
 
 ## intent:deny
 - no
@@ -216,6 +238,11 @@
 - It was super nice
 - very
 - nice
+- 5 stars
+- 1 star
+- 10/10
+- 8/10
+- 8/8 it was gr8 m8
 
 ## intent:mood_unhappy
 - sad
@@ -239,6 +266,7 @@
 - banana?
 - Banana?
 - I like you
+- What is meaning of life?
 
 ## intent:ask_assistance
 - I need assistance
@@ -265,6 +293,7 @@
 - What is that all about?
 - Can you specify?
 - give me an anwer
+- Answer my question
 
 ## intent:state_name
 - My name is [Name Nameson](name)
@@ -274,9 +303,10 @@
 - [Mats Hummels](name)
 - I am [Gregor Braginson](name)
 - The name is [Schweitzer](name)
-- my name is Jan
+- my name is [Jan](name)
 - My name is [Jan](name)
-- My name is [Jan](name) Feldmann
+- My name is [Jan Feldmann](name)
+- [Peter Pan](name)
 
 ## intent:state_e-mail
 - [name@name.son](e-mail)
@@ -287,14 +317,8 @@
 - [jan@ms.de](e-mail)
 - my email adress is : [jan@ms.de](e-mail)
 - [jan.feldmann@mindsquare.de](name)
-
-## intent:state_day
-- How about [Friday](day)
-- [Monday](day) would suit me best
-- [Thursday](day) sounds good!
-- I could do [Wednesday](day)
-- I'm thinking about [Tuesday](day)
-- [monday](day)
+- My mail is [jan.feldmann@mindsquare.de](e-mail)
+- [peter@pan.de](e-mail)
 
 ## intent:state_slot
 - Slot [1](time-slot) please
@@ -302,10 +326,16 @@
 - Number [3](time-slot)
 - Please reserve [4](time-slot)
 - [5](time-slot)
+- slot [2](time-slot) please
 
 ## synonym:AI
 - artificial intelligence
+- ai
+- KI
+
+## synonym:
 
 ## synonym:apply
 - application process
 - application
+- apply

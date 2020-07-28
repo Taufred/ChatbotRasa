@@ -76,6 +76,8 @@
  - utter_application
 * affirm
  - application_form
+ - form{"name":"application_form"}
+ - form{"name":null}
 * thank
  - utter_welcome
 > check_conversation_finish
@@ -87,6 +89,8 @@
  - utter_application
 * ask_for_form
  - application_form
+ - form{"name":"application_form"}
+ - form{"name":null}
 * thank
  - utter_welcome
 > check_conversation_finish
@@ -101,6 +105,8 @@
  - form{"name":null}
 * affirm
  - application_form
+ - form{"name":"application_form"}
+ - form{"name":null}
 * thank
  - utter_welcome
 > check_conversation_finish
@@ -134,12 +140,12 @@
  - find_days_form
  - form{"name":"find_days_form"}
  - form{"name":"null"}
-* state_day
+* inform_time_and_day{"day":"Tuesday"}
  - slot{"day":"Tuesday"}
  - find_slots_form
  - form{"name":"find_slots_form"}
  - form{"name":"null"}
-* state_slot
+* state_slot{"time-slot":"2"}
  - slot{"time-slot":"2"}
  - book_session_form
  - form{"name":"book_session_form"}
@@ -166,12 +172,12 @@
  - find_days_form
  - form{"name":"find_days_form"}
  - form{"name":"null"}
-* state_day
+* inform_time_and_day{"day":"Tuesday"}
  - slot{"day":"Tuesday"}
  - find_slots_form
  - form{"name":"find_slots_form"}
  - form{"name":"null"}
-* state_slot
+* state_slot{"time-slot":"2"}
  - slot{"time-slot":"2"}
  - book_session_form
  - form{"name":"book_session_form"}
@@ -209,12 +215,12 @@
  - find_days_form
  - form{"name":"find_days_form"}
  - form{"name":"null"}
-* state_day
+* inform_time_and_day{"day":"Tuesday"}
  - slot{"day":"Tuesday"}
  - find_slots_form
  - form{"name":"find_slots_form"}
  - form{"name":"null"}
-* state_slot
+* state_slot{"time-slot":"2"}
  - slot{"time-slot":"2"}
  - book_session_form
  - form{"name":"book_session_form"}
@@ -238,12 +244,12 @@
  - find_days_form
  - form{"name":"find_days_form"}
  - form{"name":"null"}
-* state_day
+* inform_time_and_day{"day":"Tuesday"}
  - slot{"day":"Tuesday"}
  - find_slots_form
  - form{"name":"find_slots_form"}
  - form{"name":"null"}
-* state_slot
+* state_slot{"time-slot":"2"}
  - slot{"time-slot":"2"}
  - book_session_form
  - form{"name":"book_session_form"}
@@ -262,3 +268,111 @@
 * feedback
     - utter_thumbsup
     - utter_anything_else
+
+## interactive_story_1
+* book_session
+    - utter_ask_name
+* state_name{"name": "Jan Feldmann"}
+    - slot{"name": "Jan Feldmann"}
+    - utter_ask_e-mail
+* state_e-mail{"e-mail": "jan.feldmann@mindsquare.de"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - find_days_form
+    - form{"name": "find_days_form"}
+    - slot{"name": "Jan Feldmann"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* inform_time_and_day{"day": "Tuesday"}
+    - slot{"day": "Tuesday"}
+    - find_slots_form
+    - form{"name": "find_slots_form"}
+    - slot{"name": "Jan Feldmann"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - slot{"day": "Tuesday"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* state_slot{"time-slot": "2"}
+    - slot{"time-slot": "2"}
+    - book_session_form
+    - form{"name": "book_session_form"}
+    - slot{"name": "Jan Feldmann"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - slot{"day": "Tuesday"}
+    - slot{"time-slot":"2"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* thank
+    - utter_welcome
+    - utter_ask_feedback
+
+## interactive_story_2
+* greet
+    - utter_greet
+* inform_time_and_day{"day": "Friday", "time_of_day": "night"}
+    - slot{"day": "Friday"}
+    - slot{"time_of_day": "night"}
+    - opening_hours_form
+    - form{"name": "opening_hours_form"}
+    - slot{"day": "Friday"}
+    - slot{"time_of_day": null}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* apply
+    - utter_application
+* ask_more
+    - faq_form
+    - form{"name": "faq_form"}
+    - slot{"requested_slot": "subject"}
+
+## interactive_story_2
+* ask_faq{"subject": "apply"}
+    - slot{"subject": "apply"}
+    - faq_form
+    - form{"name": "faq_form"}
+    - slot{"subject": "apply"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* affirm
+    - application_form
+    - form{"name": "application_form"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* goodbye
+    - utter_goodbye
+>check_conversation_finish
+
+## interactive_story_3
+* ask_faq{"subject": "degree"}
+    - slot{"subject": "degree"}
+    - faq_form
+    - form{"name": "faq_form"}
+    - slot{"subject": "degree"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* affirm
+    - application_form
+    - form{"name": "application_form"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* goodbye
+    - utter_goodbye
+>check_conversation_finish
+
+## interactive_story_3
+* ask_faq{"subject": "salary"}
+    - slot{"subject": "salary"}
+    - faq_form
+    - form{"name": "faq_form"}
+    - slot{"subject": "salary"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* affirm
+    - application_form
+    - form{"name": "application_form"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* goodbye
+    - utter_goodbye
+>check_conversation_finish
+
