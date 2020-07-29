@@ -65,6 +65,7 @@
 * greet
  - utter_greet
 * apply
+ - slot{"subject":"apply"}
  - utter_application
 * deny
  - utter_anything_else
@@ -73,6 +74,7 @@
 * greet
  - utter_greet
 * apply
+ - slot{"subject":"apply"}
  - utter_application
 * affirm
  - application_form
@@ -86,6 +88,7 @@
 * greet
  - utter_greet
 * apply
+ - slot{"subject":"apply"}
  - utter_application
 * ask_for_form
  - application_form
@@ -260,7 +263,7 @@
 
 ## New Story
 * chatter
-    - utter_iamabot
+    - utter_chatter
 
 ## Feedback
 > check_conversation_finish
@@ -319,6 +322,7 @@
     - form{"name": null}
     - slot{"requested_slot": null}
 * apply
+    - slot{"subject":"apply"}
     - utter_application
 * ask_more
     - faq_form
@@ -406,3 +410,69 @@
 ## tell_user_ID
 * state_user_ID
     - utter_greet
+
+## user_asks_more
+* feedback
+    - utter_thumbsup
+    - utter_anything_else
+* affirm
+    - utter_tasks
+
+## calm_down
+* calm_down
+ - utter_calm
+
+## assistance
+* ask_assistance
+ - utter_tasks
+
+## deny_feedback
+ - utter_ask_feedback
+* deny
+ - utter_thanks
+ - utter_anything_else
+
+## faq_ai_into_affirm
+* ask_faq{"subject":"AI"}
+    - slot{"subject": "AI"}
+    - faq_form
+    - form{"name": "faq_form"}
+    - slot{"subject": "AI"}
+    - form{"name": null}
+* affirm
+    - utter_ask_name
+* state_name{"name": "Yannick Ruppert"}
+    - slot{"name": "Yannick Ruppert"}
+    - utter_ask_e-mail
+* state_e-mail{"e-mail": "jan.feldmann@mindsquare.de"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - find_days_form
+    - form{"name": "find_days_form"}
+    - slot{"name": "Yannick Ruppert"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* inform_time_and_day{"day": "Tuesday"}
+    - slot{"day": "Tuesday"}
+    - find_slots_form
+    - form{"name": "find_slots_form"}
+    - slot{"name": "Yannick Ruppert"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - slot{"day": "Tuesday"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* state_slot{"time-slot": "2"}
+    - slot{"time-slot": "2"}
+    - book_session_form
+    - form{"name": "book_session_form"}
+    - slot{"name": "Yannick Ruppert"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - slot{"day": "Tuesday"}
+    - slot{"time-slot":"2"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+
+## deny_goodbye
+ - utter_goodbye
+* deny
+ - utter_anything_else

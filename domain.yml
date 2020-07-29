@@ -19,8 +19,9 @@ actions:
 - utter_thumbsup
 - utter_welcome
 - action_session_start
+- utter_calm
+- utter_chatter
 entities:
-- date
 - day
 - e-mail
 - name
@@ -62,6 +63,7 @@ intents:
 - out_of_scope
 - state_day
 - state_user_ID
+- calm_down
 responses:
   utter_anything_else:
   - text: Is there anything else I can help you with?
@@ -104,12 +106,16 @@ responses:
   utter_thanks:
   - text: Thank you.
   utter_thumbsup:
-  - text: (y)
+  - text: 👍
   utter_welcome:
   - text: You're welcome!
+  utter_calm:
+  - text: I am very calm :) Please continue whenever you are ready.
+  utter_chatter:
+  - text: I don't know how to respond to this. But I know that I am a happy bot :)
 session_config:
   carry_over_slots_to_new_session: false
-  session_expiration_time: 60
+  session_expiration_time: 600
 slots:
   day:
     type: text

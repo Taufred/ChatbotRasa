@@ -31,6 +31,7 @@
 - hello friend
 - Good morning, bot!
 - Howdy bot
+- Who are you
 
 ## intent:ask_for_opening_hours
 - I would like to know the opening hours
@@ -45,6 +46,7 @@
 - what are your business hours
 - what time do you open
 - how late are you open
+- what are your opening hours?
 
 ## intent:inform_time_and_day
 - when are you open on [Monday](day)?
@@ -62,8 +64,6 @@
 - when can I visit on [Wednesday](day)?
 - are you open in the [afternoon](time_of_day)?
 - can I come in the [morning](time_of_day)?
-- are you open on the [5th of July](date)?
-- what are your times on [October 17th](date)?
 - When are you open on [Monday](day)?
 - When are you open on [monday](day)?
 - [tomorrow](day)
@@ -76,6 +76,16 @@
 - [monday](day)
 - How about [Tuesday](day)?
 - When are you open on [Friday](day) [night](time_of_day)?
+- I want to know when I can visit the company [saturday](day) [morning](time_of_day)
+- [all](day) days
+- [every](day) day
+- [all](day) of them
+- [every](day) single one
+- [wednesday](day)
+- when are you open on [saturday](day)?
+- when are you open [saturday](day) [morning](time_of_day)?
+- on [tuesday](day), please
+- I changed my mind, [Friday](day) would be better
 
 ## intent:apply
 - I would like to apply for a job
@@ -109,6 +119,9 @@
 - I'd like to book a session
 - I want to book an expert session
 - I would like to book one!
+- just book it
+- I wanna book an expert session
+- i wanna have a quick session
 
 ## intent:ask_faq
 - Tell me about [AI](subject)
@@ -128,6 +141,9 @@
 - What is the [salary](subject)?
 - How much does it [pay]{"entity": "subject", "value": "salary"}?
 - How much does a job at [mindsquare](name) [pay]{"entity": "subject", "value": "salary"}?
+- How can I find out more about [AI](subject)?
+- what's the [process](subject) like?
+- I want to know more about [Artificial Intelligence](subject)
 
 ## intent:thank
 - thank you
@@ -151,6 +167,8 @@
 - Thank you
 - Thanks my friend!
 - Insane, bud!
+- well that worked, thanks MindBot!
+- Thanks, mate
 
 ## intent:goodbye
 - bye
@@ -174,6 +192,7 @@
 - bye bot!
 - Alright then!
 - Alright then, keep your secrets
+- bye mindbot
 
 ## intent:affirm
 - yes
@@ -192,6 +211,9 @@
 - okay
 - Yes please
 - Hell yeah!
+- There is in fact!
+- yes sir!
+- Sure
 
 ## intent:deny
 - no
@@ -208,6 +230,9 @@
 - do you have something else
 - no this does not work for me
 - Nah, I'm good.
+- not at all
+- no, thanks
+- No, don't leave me
 
 ## intent:mood_great
 - perfect
@@ -249,6 +274,9 @@
 - 8/10
 - 8/8 it was gr8 m8
 - It was terrific!
+- unexpected, but 2/3 now
+- not satisfied at all
+
 
 ## intent:mood_unhappy
 - sad
@@ -273,11 +301,22 @@
 - Banana?
 - I like you
 - What is meaning of life?
+- What is my ID?
+- What's my ID?
+- Can you give me a phone number?
+- I got this weird rash on my arm...
+- I wanna buy a book
 
 ## intent:ask_assistance
 - I need assistance
 - I  need assistance
 - What can you do?
+- help
+- I need help
+- help me
+- please help me
+- Can you help me?
+- Can you assist me?
 
 ## intent:suggest
 - You could do this better
@@ -313,6 +352,11 @@
 - My name is [Jan](name)
 - My name is [Jan Feldmann](name)
 - [Peter Pan](name)
+- [Julius Caesar](name)
+- [Christopher Walkin](name)
+- [Marcus Winkler](name)
+- My name is [Marcus Winkler](name)
+- My name is [Peter Pan](name)
 
 ## intent:state_e-mail
 - [name@name.son](e-mail)
@@ -325,24 +369,46 @@
 - [jan.feldmann@mindsquare.de](name)
 - My mail is [jan.feldmann@mindsquare.de](e-mail)
 - [peter@pan.de](e-mail)
+- [harry.potter@aol.com](e-mail)
 
 ## intent:state_slot
 - Slot [1](time-slot) please
 - I'd like to book slot [2](time-slot)
 - Number [3](time-slot)
 - Please reserve [4](time-slot)
-- [5](time-slot)
+- [3](time-slot)
 - slot [2](time-slot) please
+- [2](time-slot)
+
+
+## intent:calm_down
+- slow down please
+- calm down
+- calm down please
+- calm man
+- slower please
+- not so fast
+- damn, slow down
+- you too fast
+- chill out
+- chillax
+- chill man
+- relax
+- relax a bit
+- chill down
+
 
 ## synonym:AI
 - artificial intelligence
 - ai
 - KI
+- Artificial Intelligence
 
 ## synonym:apply
 - application process
 - application
 - apply
+- process
 
 ## synonym:degree
 - diploma
@@ -358,3 +424,9 @@
 
 ## regex:user_ID
 - [0-9]{6}
+
+## regex:time-slot
+- [0-9]{1}
+
+## regex:e-mail
+- [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}

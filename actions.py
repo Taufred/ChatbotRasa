@@ -96,6 +96,9 @@ class Opening_Hours_Form(FormAction):
 			my_date = date.today()
 			tomorrow = my_date + datetime.timedelta(days=1)
 			day_name = calendar.day_name[tomorrow .weekday()]
+		elif day.lower() == "all" or day.lower() == every:
+			dispatcher.utter_message("Sorry, our opening hours differ from day to day. Please ask for specific day, so that I can retrieve the correct information.")
+			return [SlotSet("time_of_day", None)]
 		else:
 			day_name = day
 		time_of_day = tracker.get_slot("time_of_day")
@@ -218,11 +221,11 @@ class Find_slots_form(FormAction):
 		e_mail = tracker.get_slot("e-mail")
 		day = tracker.get_slot("day")
 		if day == "Monday" or day == "monday":
-			dispatcher.utter_message("We have slots available at [1] 10:15, [2] 11:00 and [3] 11:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
+			dispatcher.utter_message("We have slots available at 1: 10:15, 2: 11:00 and 3: 11:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
 		elif day == "Tuesday" or day == "tuesday":
-			dispatcher.utter_message("We have slots available at [1] 9:15, [2] 10:10 and [3] 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
+			dispatcher.utter_message("We have slots available at 1: 9:15, 2: 10:10 and 3: 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
 		elif day == "Friday" or day == "friday":
-			dispatcher.utter_message("We have slots available at [1] 10:15, [2] 11:15 and [3] 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
+			dispatcher.utter_message("We have slots available at 1: 10:15, 2: 11:15 and 3: 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
 		else:
 			dispatcher.utter_message("Sorry, please select one of the available days.")
 			return[SlotSet("day", None)]
@@ -239,7 +242,6 @@ class ActionSessionStart(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[EventType]:
-        print("function called")
         # the session should begin with a `session_started` event
         events = [SessionStarted()]
         dispatcher.utter_message("Welcome, my name is MindBot. Before we start, would you be so kind to tell me your user ID from the survey?")
