@@ -3,7 +3,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
-from rasa_sdk.events import EventType, SlotSet
+from rasa_sdk.events import EventType, SlotSet, SessionStarted, ActionExecuted
 
 import calendar
 import json
@@ -227,3 +227,22 @@ class Find_slots_form(FormAction):
 			dispatcher.utter_message("Sorry, please select one of the available days.")
 			return[SlotSet("day", None)]
 		return []
+
+
+class ActionSessionStart(Action):
+    def name(self) -> Text:
+        return "action_session_start"
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[EventType]:
+        print("function called")
+        # the session should begin with a `session_started` event
+        events = [SessionStarted()]
+        dispatcher.utter_message("Welcome, my name is MindBot. Before we start, would you be so kind to tell me your user ID from the survey?")
+        # an `action_listen` should be added at the end as a user message follows
+        events.append(ActionExecuted("action_listen"))
+        return events

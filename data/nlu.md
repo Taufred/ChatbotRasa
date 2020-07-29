@@ -349,3 +349,12 @@
 
 ## synonym:salary
 - pay
+
+## intent:state_user_ID
+- [123456](user_ID)
+- My ID is [234567](user_ID)
+- I am user nr. [987654](user_ID)
+- [937564](user_ID) is my User ID
+
+## regex:user_ID
+- [0-9]{6}

@@ -18,6 +18,7 @@ actions:
 - utter_thanks
 - utter_thumbsup
 - utter_welcome
+- action_session_start
 entities:
 - date
 - day
@@ -27,6 +28,7 @@ entities:
 - subject
 - time-slot
 - time_of_day
+- user_ID
 forms:
 - application_form
 - book_session_form
@@ -59,6 +61,7 @@ intents:
 - suggest
 - out_of_scope
 - state_day
+- state_user_ID
 responses:
   utter_anything_else:
   - text: Is there anything else I can help you with?
@@ -90,7 +93,7 @@ responses:
   - text: Goodbye, it was nice talking to you!
   - text: Goodbye!
   utter_greet:
-  - text: Hello, I am MindBot! I am here to assist you for any questions you have.
+  - text: Hello there! I, MindBot, am here to assist you for any questions you have. What can I help you with today?
   utter_happy:
   - text: Great, carry on!
   utter_iamabot:
@@ -105,7 +108,7 @@ responses:
   utter_welcome:
   - text: You're welcome!
 session_config:
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
   session_expiration_time: 60
 slots:
   day:
