@@ -96,7 +96,7 @@ class Opening_Hours_Form(FormAction):
 			my_date = date.today()
 			tomorrow = my_date + datetime.timedelta(days=1)
 			day_name = calendar.day_name[tomorrow .weekday()]
-		elif day.lower() == "all" or day.lower() == every:
+		elif day.lower() == "all" or day.lower() == "every":
 			dispatcher.utter_message("Sorry, our opening hours differ from day to day. Please ask for specific day, so that I can retrieve the correct information.")
 			return [SlotSet("time_of_day", None)]
 		else:

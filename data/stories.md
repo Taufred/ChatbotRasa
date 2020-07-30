@@ -21,6 +21,22 @@
  - utter_welcome
 > check_conversation_finish
 
+## opening hours + time of day + day
+* greet
+ - utter_greet
+* ask_for_opening_hours
+ - utter_ask_time_and_day
+* inform_time_and_day{"day": "Tuesday"}{"time_of_day":"evening"}
+ - slot{"day":"Tuesday"}
+ - slot{"time_of_day":"evening"}
+ - opening_hours_form
+ - form{"name":"opening_hours_form"}
+ - form{"name": null}
+ - slot{"time_of_day": null}
+* thank
+ - utter_welcome
+> check_conversation_finish
+
 ## opening hours + day
 * greet
  - utter_greet
@@ -536,3 +552,45 @@
     - form{"name":"book_session_form"}
     - slot{"requested_slot": "time-slot"}
     - utter_need_slot
+
+## book_session_into_opening_times
+* book_session
+    - utter_ask_name
+* state_name{"name": "Jan Feldmann"}
+    - slot{"name": "Jan Feldmann"}
+    - utter_ask_e-mail
+* state_e-mail{"e-mail": "jan.feldmann@mindsquare.com"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.com"}
+    - find_days_form
+    - form{"name": "find_days_form"}
+    - slot{"name": "Jan Feldmann"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.com"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* inform_time_and_day{"day": "Tuesday"}
+    - slot{"day": "Tuesday"}
+    - find_slots_form
+    - form{"name": "find_slots_form"}
+    - slot{"name": "Jan Feldmann"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.com"}
+    - slot{"day": "Tuesday"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* state_slot{"time-slot": "2"}
+    - slot{"time-slot": "2"}
+    - book_session_form
+    - form{"name": "book_session_form"}
+    - slot{"name": "Jan Feldmann"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.com"}
+    - slot{"day": "Tuesday"}
+    - slot{"time-slot":"2"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* ask_for_opening_hours
+    - utter_ask_time_and_day
+* inform_time_and_day{"day":"saturday"}
+    - slot{"day": "saturday"}
+    - opening_hours_form
+    - form{"name":"opening_hours_form"}
+    - form{"name": null}
+    - slot{"time_of_day": null}

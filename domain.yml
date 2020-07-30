@@ -29,7 +29,6 @@ entities:
 - day
 - e-mail
 - name
-- sentiment
 - subject
 - time-slot
 - time_of_day
@@ -65,7 +64,6 @@ intents:
 - chatter
 - suggest
 - out_of_scope
-- state_day
 - state_user_ID
 - calm_down
 responses:
