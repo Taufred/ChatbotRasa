@@ -357,6 +357,17 @@
 - [Marcus Winkler](name)
 - My name is [Marcus Winkler](name)
 - My name is [Peter Pan](name)
+- [Jak Farley](name)
+- [Jon Lim](name)
+- [Brodie Wilcox](name)
+- [Lola-Mae Cantu](name)
+- [Fateh Hancock](name)
+- [Farhaan Simon](name)
+- [Mari Clarke](name)
+- [Ayah Herring](name)
+- [Brittany Roach](name)
+- [Bill Shah](name)
+
 
 ## intent:state_e-mail
 - [name@name.son](e-mail)
@@ -370,6 +381,7 @@
 - My mail is [jan.feldmann@mindsquare.de](e-mail)
 - [peter@pan.de](e-mail)
 - [harry.potter@aol.com](e-mail)
+
 
 ## intent:state_slot
 - Slot [1](time-slot) please

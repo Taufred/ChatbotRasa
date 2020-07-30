@@ -61,6 +61,15 @@
  - utter_welcome
 > check_conversation_finish
 
+## opening hours sad
+* inform_time_and_day
+ - opening_hours_form
+ - form{"name":"opening_hours_form"}
+ - slot{"requested_slot": "day"}
+ - utter_need_day
+* deny
+ - utter_anything_else
+
 ## application 1
 * greet
  - utter_greet
@@ -476,3 +485,54 @@
  - utter_goodbye
 * deny
  - utter_anything_else
+
+## book_session_no_name
+ - utter_ask_name
+* state_name
+ - utter_need_name
+* deny
+ - utter_anything_else
+
+## book_session_no_mail
+ - utter_ask_e-mail
+* state_e-mail
+ - find_days_form
+ - form{"name":"find_days_form"}
+ - slot{"requested_slot": "e-mail"}
+ - utter_need_mail
+* deny
+ - utter_anything_else
+
+## book_session_no_day
+* state_name{"name": "Yannick Ruppert"}
+ - slot{"name": "Yannick Ruppert"}
+ - utter_ask_e-mail
+* state_e-mail{"e-mail": "jan.feldmann@mindsquare.de"}
+ - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+ - find_days_form
+ - form{"name": "find_days_form"}
+ - slot{"name": "Yannick Ruppert"}
+ - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+ - form{"name": null}
+ - slot{"requested_slot": null}
+* inform_time_and_day
+ - find_slots_form
+ - form{"name":"find_slots_form"}
+ - slot{"requested_slot": "day"}
+ - utter_need_day
+
+## book_session_no_slot
+* inform_time_and_day{"day": "Tuesday"}
+    - slot{"day": "Tuesday"}
+    - find_slots_form
+    - form{"name": "find_slots_form"}
+    - slot{"name": "Yannick Ruppert"}
+    - slot{"e-mail": "jan.feldmann@mindsquare.de"}
+    - slot{"day": "Tuesday"}
+    - form{"name": null}
+    - slot{"requested_slot": null}
+* state_slot
+    - book_session_form
+    - form{"name":"book_session_form"}
+    - slot{"requested_slot": "time-slot"}
+    - utter_need_slot

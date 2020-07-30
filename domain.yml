@@ -21,6 +21,10 @@ actions:
 - action_session_start
 - utter_calm
 - utter_chatter
+- utter_need_day
+- utter_need_name
+- utter_need_mail
+- utter_need_slot
 entities:
 - day
 - e-mail
@@ -113,6 +117,14 @@ responses:
   - text: I am very calm :) Please continue whenever you are ready.
   utter_chatter:
   - text: I don't know how to respond to this. But I know that I am a happy bot :)
+  utter_need_day:
+  - text: I still need a specific day from you. Maybe I did not understand correctly? If so, please repeat.
+  utter_need_name:
+  - text: To be able to book a session, I need to fill in some name. Maybe I did not understand correctly? If so, can you please repeat your name?
+  utter_need_mail:
+  - text: We need some kind of mail adress to send a confirmation mail with details. If I didn't understand, please be so kind to repeat your e-mail.
+  utter_need_slot:
+  - text: Seems like you did not choose a valid slot. Try answering with the number of the slot (like 1, 2 or 3).
 session_config:
   carry_over_slots_to_new_session: false
   session_expiration_time: 600
