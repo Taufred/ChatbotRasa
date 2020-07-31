@@ -32,6 +32,9 @@
 - Good morning, bot!
 - Howdy bot
 - Who are you
+- hi bot
+- whoopy
+- Hello my friend!
 
 ## intent:ask_for_opening_hours
 - I would like to know the opening hours
@@ -47,6 +50,8 @@
 - what time do you open
 - how late are you open
 - what are your opening hours?
+- I would like to know your opening hours
+- No I want to know your opening times!
 
 ## intent:inform_time_and_day
 - when are you open on [Monday](day)?
@@ -86,6 +91,14 @@
 - when are you open [saturday](day) [morning](time_of_day)?
 - on [tuesday](day), please
 - I changed my mind, [Friday](day) would be better
+- when can i come in on [saturday](day)?
+- At what time can I visit the company on a [Saturday](day) [morning](time_of_day)?
+- [Saturday](day) then
+- for [Monday](day), as I said
+- [Tuesday](day) pls
+- What are your opening times on [friday](day)?
+- When are you open on [saturday](day)?
+- i am quite eager to know when i can get to your company this [saturday](day)?
 
 ## intent:apply
 - I would like to apply for a job
@@ -95,6 +108,7 @@
 - Where can I apply for a job?
 - Do you have any open positions?
 - I want to apply for a job
+- Do you have any jobs?
 
 ## intent:ask_for_form
 - Do you have a form
@@ -105,6 +119,7 @@
 - Please redirect me
 - [application](subject) form?
 - where can I apply
+- yes, i'd like to apply
 
 ## intent:book_session
 - Can I book an expert session?
@@ -122,6 +137,12 @@
 - just book it
 - I wanna book an expert session
 - i wanna have a quick session
+- sess
+- book
+- I'd like a quick sess
+- I would like to book an [AI](subject) expert session
+- No I want to book a session
+- I want to book a session
 
 ## intent:ask_faq
 - Tell me about [AI](subject)
@@ -144,6 +165,9 @@
 - How can I find out more about [AI](subject)?
 - what's the [process](subject) like?
 - I want to know more about [Artificial Intelligence](subject)
+- tell me about [ai]{"entity": "subject", "value": "AI"}
+- What is the [application process]{"entity": "subject", "value": "apply"}?
+- What is the [application process]{"entity": "subject", "value": "apply"} like?
 
 ## intent:thank
 - thank you
@@ -169,6 +193,10 @@
 - Insane, bud!
 - well that worked, thanks MindBot!
 - Thanks, mate
+- thank again
+- thank
+- Nice. Thanks, bro!
+- thanks bro
 
 ## intent:goodbye
 - bye
@@ -193,6 +221,8 @@
 - Alright then!
 - Alright then, keep your secrets
 - bye mindbot
+- Bye
+- Well goodbye
 
 ## intent:affirm
 - yes
@@ -214,6 +244,9 @@
 - There is in fact!
 - yes sir!
 - Sure
+- yes, one last thing
+- Sure thing!
+- sure
 
 ## intent:deny
 - no
@@ -233,6 +266,9 @@
 - not at all
 - no, thanks
 - No, don't leave me
+- oops
+- Nope
+- you shouldnt
 
 ## intent:mood_great
 - perfect
@@ -276,7 +312,10 @@
 - It was terrific!
 - unexpected, but 2/3 now
 - not satisfied at all
-
+- still pretty alright
+- 5/7
+- Very much
+- i am!
 
 ## intent:mood_unhappy
 - sad
@@ -306,6 +345,12 @@
 - Can you give me a phone number?
 - I got this weird rash on my arm...
 - I wanna buy a book
+- 🍆
+- 📚
+- I would like one pepperoni pizza
+- what's your favorite color?
+- ill take that as a yes
+- this one?
 
 ## intent:ask_assistance
 - I need assistance
@@ -339,6 +384,7 @@
 - Can you specify?
 - give me an anwer
 - Answer my question
+- Answer my questoin
 
 ## intent:state_name
 - My name is [Name Nameson](name)
@@ -367,7 +413,16 @@
 - [Ayah Herring](name)
 - [Brittany Roach](name)
 - [Bill Shah](name)
-
+- [Ridley Johnson](name)
+- [Wes Anderson](name)
+- I am [Ridley Scott](name)
+- [Ridley Scott](name)
+- [Miriam Webster](name)
+- [Denise Villeneuve](name)
+- [Waad al Kateab](name)
+- [Jens Feldmann](name)
+- [Ulrich Zeigler](name)
+- For [Marvin Redlich](name)
 
 ## intent:state_e-mail
 - [name@name.son](e-mail)
@@ -381,7 +436,14 @@
 - My mail is [jan.feldmann@mindsquare.de](e-mail)
 - [peter@pan.de](e-mail)
 - [harry.potter@aol.com](e-mail)
-
+- [j.r@aol.de](e-mail)
+- [miriam.webster@words.com](e-mail)
+- [jensfeldmann93@gmail.com](e-mail)
+- [ulli@gmail.de](e-mail)
+- my email ist [marvin@barfin.de](e-mail)
+- My email is [marv@barf.un](e-mail)
+- [marv@barf.un](e-mail)
+- [marv@barf.uni](e-mail)
 
 ## intent:state_slot
 - Slot [1](time-slot) please
@@ -391,7 +453,12 @@
 - [3](time-slot)
 - slot [2](time-slot) please
 - [2](time-slot)
-
+- I want slot [2](time-slot) (two)
+- the one at [10:15](time-slot)
+- the [earliest](time-slot)
+- [1](time-slot)
+- [9:15](time-slot)
+- [7](time-slot)
 
 ## intent:calm_down
 - slow down please
@@ -408,7 +475,14 @@
 - relax
 - relax a bit
 - chill down
+- maybe go to bed, get some rest?
 
+## intent:state_user_ID
+- [123456](user_ID)
+- My ID is [234567](user_ID)
+- I am user nr. [987654](user_ID)
+- [937564](user_ID) is my User ID
+- [687305](user_ID)
 
 ## synonym:AI
 - artificial intelligence
@@ -419,7 +493,6 @@
 ## synonym:apply
 - application process
 - application
-- apply
 - process
 
 ## synonym:degree
@@ -428,17 +501,11 @@
 ## synonym:salary
 - pay
 
-## intent:state_user_ID
-- [123456](user_ID)
-- My ID is [234567](user_ID)
-- I am user nr. [987654](user_ID)
-- [937564](user_ID) is my User ID
-
-## regex:user_ID
-- [0-9]{6}
+## regex:e-mail
+- [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}
 
 ## regex:time-slot
 - [0-9]{1}
 
-## regex:e-mail
-- [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}
+## regex:user_ID
+- [0-9]{6}
