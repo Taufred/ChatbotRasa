@@ -135,14 +135,13 @@ class Book_session_form(FormAction):
 	@staticmethod
 	def required_slots(tracker:Tracker) -> List[Text]:
 		'''A List of required slots that the form has to fill'''
-		return ["name","e-mail","day","time-slot"]
+		return ["name","e-mail","time-slot"]
 
 	def submit(self, dispatcher: CollectingDispatcher,
 			tracker: Tracker,
 			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		name = tracker.get_slot("name")
-		day = tracker.get_slot("day")
-		dispatcher.utter_message("I have booked a session on {} for {}!".format(day,name))
+		dispatcher.utter_message("I have booked a session for {} on Friday! You will receive a confirmation mail with further instructions.".format(name))
 		return []
 		
 class FAQ_form(FormAction):
@@ -174,9 +173,9 @@ class FAQ_form(FormAction):
 			dispatcher.utter_message("I do not know anything about {}. Would you like to book an expert session?".format(subject))
 		return []
 
-class Find_days_form(FormAction):
+class Find_slots_form(FormAction):
 	def name(self) -> Text:
-		return "find_days_form"
+		return "find_slots_form"
 #
 	@staticmethod
 	def required_slots(tracker:Tracker) -> List[Text]:
@@ -194,41 +193,7 @@ class Find_days_form(FormAction):
 			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		name = tracker.get_slot("name")
 		e_mail = tracker.get_slot("e-mail")
-		dispatcher.utter_message("Hello {}, on which day would you like to book a session? We have spots available on Monday, Tuesday and Friday.".format(name))
-		return []
-
-class Find_slots_form(FormAction):
-	def name(self) -> Text:
-		return "find_slots_form"
-#
-	@staticmethod
-	def required_slots(tracker:Tracker) -> List[Text]:
-		'''A List of required slots that the form has to fill'''
-		return ["name","e-mail","day"]
-
-	def slot_mappings(self) -> Dict[Text, Any]:
-		return {"name": self.from_entity(entity="name",
-									intent= ["state_name"]),
-				"day": self.from_entity(entity="day",
-									intent= ["state_day"]),
-				"e-mail": self.from_entity(entity="e-mail",
-									intent= ["state_e-mail"])}
-
-	def submit(self, dispatcher: CollectingDispatcher,
-			tracker: Tracker,
-			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-		name = tracker.get_slot("name")
-		e_mail = tracker.get_slot("e-mail")
-		day = tracker.get_slot("day")
-		if day == "Monday" or day == "monday":
-			dispatcher.utter_message("We have slots available at 1: 10:15, 2: 11:00 and 3: 11:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
-		elif day == "Tuesday" or day == "tuesday":
-			dispatcher.utter_message("We have slots available at 1: 9:15, 2: 10:10 and 3: 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
-		elif day == "Friday" or day == "friday":
-			dispatcher.utter_message("We have slots available at 1: 10:15, 2: 11:15 and 3: 12:45 for you on {}, {}. Please reply with the slot number you want to reserve.".format(day, name))
-		else:
-			dispatcher.utter_message("Sorry, please select one of the available days.")
-			return[SlotSet("day", None)]
+		dispatcher.utter_message("We have slots available at 1: 10:15, 2: 11:15 and 3: 12:45 for you on Friday, {}. Please reply with the slot number you want to reserve.".format(name))
 		return []
 
 
