@@ -322,7 +322,8 @@
 * ask_more
     - faq_form
     - form{"name": "faq_form"}
-    - slot{"requested_slot": "subject"}
+    - slot{"subject":"apply"}
+    - slot{"requested_slot": "null"}
 
 ## interactive_story_2
 * ask_faq{"subject": "apply"}
