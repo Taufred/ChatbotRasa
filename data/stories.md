@@ -526,3 +526,80 @@
     - form{"name":"opening_hours_form"}
     - form{"name": null}
     - slot{"time_of_day": null}
+
+## usertesting_1
+* greet
+  - utter_greet
+* state_slot{"time_slot":"1"}
+  - slot{"time-slot": "2"}
+  - book_session_form
+  - form{"name": "book_session_form"}
+  - slot{"requested_slot":"name"}
+  - form{"name": null}
+  - utter_ask_name
+* deny
+  - utter_anything_else
+* affirm
+  - utter_tasks
+* inform_time_and_day{"day":"saturday"}
+  - slot{"day":"saturday"}
+  - opening_hours_form
+  - form{"name":"opening_hours_form"}
+  - form{"name":null}
+  - slot{"time_of_day":null}
+* thank
+  - utter_welcome
+  - utter_ask_feedback
+* feedback
+  - utter_thumbsup
+  - utter_anything_else
+* ask_for_form
+  - application_form
+  - form{"name":"application_form"}
+  - form{"name":null}
+  - slot{"requested_slot":null}
+* thank
+  - utter_welcome
+  - utter_ask_feedback
+* feedback
+  - utter_thumbsup
+  - utter_anything_else
+* affirm
+  - utter_tasks
+* book_session
+  - utter_ask_name
+* state_name
+  - utter_need_name
+* state_name{"name":"Miriam Webster"}
+  - slot{"name":"Miriam Webster"}
+  - utter_ask_e-mail
+* state_e-mail{"e-mail":"miriam.webster@words.com"}
+  - slot{"e-mail":"miriam.webster@words.com"}
+  - find_slots_form
+  - form{"name":"find_slots_form"}
+  - slot{"name":"Miriam Webster"}
+  - slot{"e-mail":"miriam.webster@words.com"}
+  - form{"name": null}
+  - slot{"requested_slot": null}
+* thank
+  - utter_need_slot
+* state_slot{"time_slot":"2"}
+  - slot{"time-slot":"2"}
+  - book_session_form
+  - form{"name":"book_session_form"}
+  - slot{"name":"Miriam Webster"}
+  - slot{"e-mail":"miriam.webster@words.com"}
+  - slot{"time-slot":"2"}
+  - form{"name":null}
+  - slot{"requested_slot":null}
+  - slot{"time-slot":null}
+* ask_faq{"subject":"AI"}
+  - slot{"subject":"AI"}
+  - faq_form
+  - form{"name":"faq_form"}
+  - form{"name": null}
+  - slot{"requested_slot":null}
+* deny
+  - utter_anything_else
+* deny
+  - utter_goodbye

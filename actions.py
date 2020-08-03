@@ -142,7 +142,7 @@ class Book_session_form(FormAction):
 			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		name = tracker.get_slot("name")
 		dispatcher.utter_message("I have booked a session for {} on Friday! You will receive a confirmation mail with further instructions.".format(name))
-		return []
+		return [SlotSet("time-slot", None)]
 		
 class FAQ_form(FormAction):
 	def name(self) -> Text:
