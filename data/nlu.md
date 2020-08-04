@@ -99,6 +99,7 @@
 - What are your opening times on [friday](day)?
 - When are you open on [saturday](day)?
 - i am quite eager to know when i can get to your company this [saturday](day)?
+- [Saturday](day)
 
 ## intent:apply
 - I would like to apply for a job
@@ -109,6 +110,7 @@
 - Do you have any open positions?
 - I want to apply for a job
 - Do you have any jobs?
+- I'd like to apply for a job
 
 ## intent:ask_for_form
 - Do you have a form
@@ -120,6 +122,7 @@
 - [application](subject) form?
 - where can I apply
 - yes, i'd like to apply
+
 
 ## intent:book_session
 - Can I book an expert session?
@@ -143,6 +146,7 @@
 - I would like to book an [AI](subject) expert session
 - No I want to book a session
 - I want to book a session
+- Lastly, I need an expert
 
 ## intent:ask_faq
 - Tell me about [AI](subject)
@@ -168,6 +172,7 @@
 - tell me about [ai]{"entity": "subject", "value": "AI"}
 - What is the [application process]{"entity": "subject", "value": "apply"}?
 - What is the [application process]{"entity": "subject", "value": "apply"} like?
+- How does the [application process]{"entity":"subject", "value": "apply"} work?
 
 ## intent:thank
 - thank you
@@ -197,6 +202,7 @@
 - thank
 - Nice. Thanks, bro!
 - thanks bro
+- thx
 
 ## intent:goodbye
 - bye
@@ -223,6 +229,7 @@
 - bye mindbot
 - Bye
 - Well goodbye
+- bye 👋
 
 ## intent:affirm
 - yes
@@ -269,6 +276,9 @@
 - oops
 - Nope
 - you shouldnt
+- We already did that
+- no, I already have a session
+- I do NOT want a session
 
 ## intent:mood_great
 - perfect
@@ -316,6 +326,7 @@
 - 5/7
 - Very much
 - i am!
+- I'm happy about that
 
 ## intent:mood_unhappy
 - sad
@@ -438,6 +449,10 @@
 - [Lara Simon](name)
 - [Vincent Snijders](name)
 - [Lowie Achterop](name)  
+- [Uisenma Borchu](name)
+- [Dror Zahavi](name)
+
+
 
 ## intent:state_e-mail
 - [name@name.son](e-mail)
@@ -459,6 +474,10 @@
 - My email is [marv@barf.un](e-mail)
 - [marv@barf.un](e-mail)
 - [marv@barf.uni](e-mail)
+- [234.123@1.24](e-mail)
+- [zip@zap.business](e-mail)
+- [info@safari.club](e-mail)
+
 
 ## intent:state_slot
 - Slot [1](time-slot) please
@@ -498,6 +517,8 @@
 - I am user nr. [987654](user_ID)
 - [937564](user_ID) is my User ID
 - [687305](user_ID)
+- [204770](user_ID)
+- My ID is [204770](user_ID)
 
 ## synonym:AI
 - artificial intelligence
@@ -516,11 +537,11 @@
 ## synonym:salary
 - pay
 
-## regex:e-mail
-- [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}
-
 ## regex:time-slot
 - [0-9]{1}
 
 ## regex:user_ID
 - [0-9]{6}
+
+## regex:e-mail
+- [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}

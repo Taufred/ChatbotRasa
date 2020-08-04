@@ -404,7 +404,7 @@
     - utter_goodbye
 
 ## tell_user_ID
-* state_user_ID
+* state_user_ID{"user_ID":"437463"}
     - utter_greet
 
 ## user_asks_more
@@ -530,7 +530,7 @@
 ## usertesting_1
 * greet
   - utter_greet
-* state_slot{"time_slot":"1"}
+* state_slot{"time-slot":"1"}
   - slot{"time-slot": "2"}
   - book_session_form
   - form{"name": "book_session_form"}
@@ -583,7 +583,7 @@
   - slot{"requested_slot": null}
 * thank
   - utter_need_slot
-* state_slot{"time_slot":"2"}
+* state_slot{"time-slot":"2"}
   - slot{"time-slot":"2"}
   - book_session_form
   - form{"name":"book_session_form"}
@@ -603,3 +603,38 @@
   - utter_anything_else
 * deny
   - utter_goodbye
+
+## session_start
+* state_user_ID {"user_ID": 532785}
+  - utter_greet
+* ask_for_opening_hours
+  - utter_ask_time_and_day
+
+## affirm1
+* ask_faq{"subject":"apply"}
+  - slot{"subject":"AI"}
+  - faq_form
+  - form{"name":"faq_form"}
+  - form{"name": null}
+  - slot{"requested_slot":null}
+* affirm
+  - application_form
+  - form{"name":"application_form"}
+  - form{"name":null}
+  - slot{"requested_slot":null}
+
+## affirm2
+* ask_faq{"subject":"AI"}
+  - slot{"subject":"AI"}
+  - faq_form
+  - form{"name":"faq_form"}
+  - form{"name": null}
+  - slot{"requested_slot":null}
+* affirm
+  - utter_ask_name
+
+## affirm3
+* deny
+  - utter_anything_else
+* affirm
+  - utter_tasks
