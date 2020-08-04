@@ -110,6 +110,7 @@
 - What about [sun]{"entity":"day","value":"Sunday"}
 - What about [sundays]{"entity":"day","value":"Sunday"}
 - And what about [tuesdays]{"entity":"day","value":"Tuesday"}?
+- I am thinking of [sat]{"entity":"day","value":"Saturday"} [morning](time_of_day)
 
 ## intent:apply
 - I would like to apply for a job
