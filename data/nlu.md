@@ -100,6 +100,16 @@
 - When are you open on [saturday](day)?
 - i am quite eager to know when i can get to your company this [saturday](day)?
 - [Saturday](day)
+- [Saturdays]{"entity":"day","value":"Saturday"}
+- When can I visit on [saturdays]{"entity":"day","value":"Saturday"}?
+- Hello MindBot! I would like to know when I can visit the company on [saturdays]{"entity":"day","value":"Saturday"}?
+- When can I visit on [Wednesdays]{"entity":"day","value":"Wednesday"}?
+- how about this [fri]{"entity":"day","value":"Friday"}?
+- [Tue]{"entity":"day","value":"Tuesday"}
+- When are you open on [thu]{"entity":"day","value":"Thursday"}
+- What about [sun]{"entity":"day","value":"Sunday"}
+- What about [sundays]{"entity":"day","value":"Sunday"}
+- And what about [tuesdays]{"entity":"day","value":"Tuesday"}?
 
 ## intent:apply
 - I would like to apply for a job
@@ -122,6 +132,7 @@
 - [application](subject) form?
 - where can I apply
 - yes, i'd like to apply
+- yes sir, please redirect me
 
 
 ## intent:book_session
@@ -147,6 +158,7 @@
 - No I want to book a session
 - I want to book a session
 - Lastly, I need an expert
+- book me an expert session
 
 ## intent:ask_faq
 - Tell me about [AI](subject)
@@ -173,6 +185,7 @@
 - What is the [application process]{"entity": "subject", "value": "apply"}?
 - What is the [application process]{"entity": "subject", "value": "apply"} like?
 - How does the [application process]{"entity":"subject", "value": "apply"} work?
+- i want to find out some things about [AI](subject)
 
 ## intent:thank
 - thank you
@@ -203,6 +216,8 @@
 - Nice. Thanks, bro!
 - thanks bro
 - thx
+- Muchas Gracias!
+- well that was easy, thanks mr MindBot
 
 ## intent:goodbye
 - bye
@@ -254,6 +269,7 @@
 - yes, one last thing
 - Sure thing!
 - sure
+- I really would!
 
 ## intent:deny
 - no
@@ -327,6 +343,7 @@
 - Very much
 - i am!
 - I'm happy about that
+- Fine, thanks for asking
 
 ## intent:mood_unhappy
 - sad
@@ -451,7 +468,9 @@
 - [Lowie Achterop](name)  
 - [Uisenma Borchu](name)
 - [Dror Zahavi](name)
-
+- [Yannick Ruppert](name)
+- My name is [Yannick Ruppert](name)
+- [Günther Jauch](name)
 
 
 ## intent:state_e-mail
@@ -477,6 +496,9 @@
 - [234.123@1.24](e-mail)
 - [zip@zap.business](e-mail)
 - [info@safari.club](e-mail)
+- [mindbot@mindsquare.de](e-mail)
+- [m@th.is](e-mail)
+
 
 
 ## intent:state_slot
@@ -536,6 +558,56 @@
 
 ## synonym:salary
 - pay
+
+## synonym:Monday
+- monday
+- mondays
+- mon
+- Mondays
+- Mon
+
+
+## synonym:Tuesday
+- tuesday
+- tuesdays
+- tue
+- Tuesdays
+- Tue
+
+## synonym:Wednesday
+- wednesday
+- Wednesdays
+- wednesdays
+- wed
+- Wed
+
+## synonym:Thursday
+- thursday
+- Thursdays
+- thursdays
+- Thu
+- thu
+
+## synonym:Friday
+- friday
+- Fridays
+- fridays
+- Fri
+- fri
+
+## synonym:Saturday
+- saturday
+- Saturdays
+- saturdays
+- Sat
+- sat
+
+## synonym:Sunday
+- sunday
+- Sundays
+- sundays
+- Sun
+- sun
 
 ## regex:time-slot
 - [0-9]{1}

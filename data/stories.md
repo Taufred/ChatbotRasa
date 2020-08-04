@@ -475,6 +475,7 @@
 * state_e-mail
  - find_slots_form
  - form{"name":"find_slots_form"}
+ - slot{"name": "Jan"}
  - slot{"requested_slot": "e-mail"}
  - utter_need_mail
 * deny
@@ -638,3 +639,15 @@
   - utter_anything_else
 * affirm
   - utter_tasks
+
+## ask_more
+* thank
+  - utter_welcome
+  - utter_ask_feedback
+* ask_more
+  - utter_tasks
+
+## deny anything else
+  -utter_anything_else
+* deny
+  - utter_goodbye

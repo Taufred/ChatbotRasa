@@ -41,7 +41,7 @@ OPENING_HOURS = {
 	0:	{
 		"morning": "11:00 - 14:30",
 		"evening": "15:00 - 18:00"
-	},
+	}
 
 }
 
@@ -53,8 +53,10 @@ def find_opening_hours(day, time_of_day):
 	for day_name in calendar.day_name:
 		days.append(day_name.lower())
 	days = dict(zip(days, range(7))); 
-	day_nr = days[day.lower()]
-
+	if day.lower() in days:
+		day_nr = days[day.lower()]
+	else:
+		return ""
 	#retrieve the opening hours from that number
 	opening_hours = OPENING_HOURS[day_nr]
 
