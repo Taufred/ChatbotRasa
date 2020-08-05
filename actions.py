@@ -53,7 +53,7 @@ def find_opening_hours(day, time_of_day):
 	for day_name in calendar.day_name:
 		days.append(day_name.lower())
 	days = dict(zip(days, range(7))); 
-	if day.lower() in days:
+	if day.lower() in days: 
 		day_nr = days[day.lower()]
 	else:
 		return ""
