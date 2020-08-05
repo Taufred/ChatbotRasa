@@ -29,7 +29,7 @@ class SentimentAnalyzer(Component):
         
         entity = {"value": value,
                   "confidence": confidence,
-                  "entity": "Sentiment",
+                  "entity": "sentiment",
                   "extractor": "sentiment_extractor"}
 
         return entity

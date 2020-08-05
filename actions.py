@@ -245,5 +245,4 @@ class ActionTagFeedback(Action):
         else:
         	return []
         tag_convo(tracker, label)
-
         return []

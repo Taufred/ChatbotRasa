@@ -36,6 +36,7 @@ entities:
 - time_of_day
 - user_ID
 - time_slot
+- sentiment
 slots:
   day:
     type: text
@@ -45,6 +46,12 @@ slots:
     type: text
   requested_slot:
     type: unfeaturized
+  sentiment:
+    type: categorical
+    values:
+    - pos
+    - neu
+    - neg
   subject:
     type: text
   time-slot:
@@ -140,6 +147,7 @@ actions:
 - utter_need_name
 - utter_need_mail
 - utter_need_slot
+- action_tag_feedback
 forms:
 - application_form
 - book_session_form

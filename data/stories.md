@@ -270,11 +270,28 @@
 * chatter
     - utter_chatter
 
-## Feedback
+## Feedback_pos
 > check_conversation_finish
     - utter_ask_feedback
-* feedback
+* feedback{"sentiment":"pos"}
+    - action_tag_feedback
     - utter_thumbsup
+    - utter_anything_else
+
+## Feedback_neu
+> check_conversation_finish
+    - utter_ask_feedback
+* feedback{"sentiment":"neu"}
+    - action_tag_feedback
+    - utter_thumbsup
+    - utter_anything_else
+
+## Feedback_neg
+> check_conversation_finish
+    - utter_ask_feedback
+* feedback{"sentiment":"neg"}
+    - action_tag_feedback
+    - utter_thanks
     - utter_anything_else
 
 ## interactive_story_1
@@ -397,7 +414,8 @@
 * thank
     - utter_welcome
     - utter_ask_feedback
-* feedback
+* feedback{"sentiment":"pos"}
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 * deny
@@ -408,7 +426,8 @@
     - utter_greet
 
 ## user_asks_more
-* feedback
+* feedback{"sentiment":"neu"}
+    - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
 * affirm
@@ -425,7 +444,6 @@
 ## deny_feedback
  - utter_ask_feedback
 * deny
- - utter_thanks
  - utter_anything_else
 
 ## faq_ai_into_affirm
@@ -551,7 +569,8 @@
 * thank
   - utter_welcome
   - utter_ask_feedback
-* feedback
+* feedback{"sentiment":"pos"}
+  - action_tag_feedback
   - utter_thumbsup
   - utter_anything_else
 * ask_for_form
@@ -562,7 +581,8 @@
 * thank
   - utter_welcome
   - utter_ask_feedback
-* feedback
+* feedback{"sentiment":"neu"}
+  - action_tag_feedback
   - utter_thumbsup
   - utter_anything_else
 * affirm
