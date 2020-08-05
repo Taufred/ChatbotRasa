@@ -7,7 +7,8 @@ from rasa_sdk.events import EventType, SlotSet, SessionStarted, ActionExecuted
 
 import calendar
 import json
-
+import os
+import requests
 
 # BACKGROUND DATA - SHOULD BE STORED IN A DATABASE OR RETRIEVED FROM A SERVER
 morning = ["morning", "noon"]
@@ -215,3 +216,34 @@ class ActionSessionStart(Action):
         # an `action_listen` should be added at the end as a user message follows
         events.append(ActionExecuted("action_listen"))
         return events
+
+def tag_convo(tracker: Tracker, label: Text) -> None:
+    """Tag a conversation in Rasa X with a given label"""
+    #config = os.environ.get("RASA_X_HOST", "rasa-x:5002")
+    config = os.environ.get("RASA_X_HOST", "localhost:5002")
+    endpoint = f"http://{config}/api/conversations/{tracker.sender_id}/tags"
+    requests.post(url=endpoint, data=label)
+    return
+
+
+class ActionTagFeedback(Action):
+    """Tag a conversation in Rasa X as positive or negative feedback, save the positive Story. Negative Stories should be reviewed. """
+
+    def name(self):
+        return "action_tag_feedback"
+
+    def run(self, dispatcher, tracker, domain) -> List[EventType]:
+    	
+
+        feedback = tracker.get_slot("sentiment")
+
+        if feedback == "pos":
+        	label = '[{"value":"postive feedback","color":"76af3d"}]'
+        	#export_stories_to_file(tracker.events,tracker.sender_id,export_path="./data/stories.md")
+        elif feedback == "neg":
+            label = '[{"value":"negative feedback","color":"ff0000"}]'
+        else:
+        	return []
+        tag_convo(tracker, label)
+
+        return []
