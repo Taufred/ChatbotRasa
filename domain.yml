@@ -1,105 +1,148 @@
 session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  session_expiration_time: 600
+  carry_over_slots_to_new_session: false
 intents:
-- greet
-- goodbye
+- feedback
 - affirm
+- thank
+- greet
+- ask_faq
 - deny
+- apply
+- inform_time_and_day
+- goodbye
+- ask_more
+- state_name
+- book_session
+- state_slot
+- state_e-mail
 - mood_great
 - mood_unhappy
 - bot_challenge
 - ask_for_opening_hours
-- inform_time_and_day
-- thank
-- ask_faq
-- apply
-- book_session
 - ask_for_form
 - ask_assistance
 - chatter
-- ask_book_session
-- feedback
 - suggest
 - out_of_scope
+- state_user_ID
+- calm_down
 entities:
 - day
-- time_of_day
-- date
+- e-mail
+- name
 - subject
-- sentiment
+- time-slot
+- time_of_day
+- user_ID
+- time_slot
 slots:
   day:
     type: text
+  e-mail:
+    type: text
+  name:
+    type: text
   requested_slot:
     type: unfeaturized
-  sentiment:
-    type: categorical
-    values:
-    - positive
-    - neutral
-    - negative
   subject:
+    type: text
+  time-slot:
     type: text
   time_of_day:
     type: text
 responses:
-  utter_greet:
-  - text: Hello, I am MindBot! I am here to assist you for any questions you have.
-  utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
-  utter_goodbye:
-  - text: Goodbye, it was nice talking to you!
-  - text: Goodbye!
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
-  utter_ask_time_and_day:
-  - text: For which day would you like to know the opening hours?
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
   utter_application:
   - text: Can I answer any questions regarding the application process or redirect
       you to the application form?
+  utter_ask_book_session:
+  - text: Perhaps you would like to speak with one of our experts. We offer special
+      expert sessions on Fridays in which all of your questions can be answered. Should
+      I book one for you?
+  utter_ask_e-mail:
+  - text: I would also need an e-mail adress from you.
+  utter_ask_feedback:
+  - text: I hope, that I could help you. How satisfied are you with this conversation?
+  utter_ask_name:
+  - text: Who should I book the session for? Please state a name.
+  utter_ask_suggestion:
+  - text: What improvements would you like to suggest?
+  utter_ask_time_and_day:
+  - text: For which day would you like to know the opening hours?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_default:
+  - text: I am not sure I understood. Can you rephrase your question?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Goodbye, it was nice talking to you!
+  - text: Goodbye! 👋
+  utter_greet:
+  - text: Hello there! I, MindBot, am here to assist you for any questions you have.
+      What can I help you with today?
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
   utter_tasks:
   - text: I can help you with applying for a job, booking a session with one of our
       experts or other questions e.g. regarding our opening hours.
-  utter_welcome:
-  - text: You're welcome!
-  utter_ask_feedback:
-  - text: I hope, that I could help you. How satisfied are you with this conversation?
-  utter_thumbsup:
-  - text: (y)
-  utter_anything_else:
-  - text: Is there anything else I can help you with?
   utter_thanks:
   - text: Thank you.
-  utter_ask_suggestion:
-  - text: What improvements would you like to suggest?
-  utter_default:
-  - text: I am not sure I understood. Can you rephrase your question?
+  utter_thumbsup:
+  - text: 👍
+  utter_welcome:
+  - text: You're welcome!
+  utter_calm:
+  - text: I am very calm 😊 Please continue whenever you are ready.
+  utter_chatter:
+  - text: I don't know how to respond to this. But I know that I am a happy bot 😁
+  utter_need_name:
+  - text: To be able to book a session, I need to fill in some name. Maybe I did not
+      understand correctly? If so, can you please rephrase your answer?
+  utter_need_mail:
+  - text: We need some kind of mail adress to send a confirmation mail with details.
+      If I didn't understand, please be so kind to rephrase your answer.
+  utter_need_slot:
+  - text: Seems like you did not choose a valid slot. Try answering with the number
+      of the slot (like 1, 2 or 3).
+  utter_need_day:
+  - text: It seems like you did not chose a specific day. Would you be so kind to
+      rephrase, so that I can maybe better understand?
 actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
-- utter_iamabot
-- utter_ask_time_and_day
-- utter_application
-- utter_tasks
-- utter_welcome
-- utter_ask_feedback
-- utter_thumbsup
 - utter_anything_else
-- utter_thanks
+- utter_application
+- utter_ask_book_session
+- utter_ask_e-mail
+- utter_ask_feedback
+- utter_ask_name
 - utter_ask_suggestion
-- action_tag_feedback
+- utter_ask_time_and_day
+- utter_cheer_up
 - utter_default
+- utter_did_that_help
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_iamabot
+- utter_tasks
+- utter_thanks
+- utter_thumbsup
+- utter_welcome
+- action_session_start
+- utter_calm
+- utter_chatter
+- utter_need_day
+- utter_need_name
+- utter_need_mail
+- utter_need_slot
 forms:
-- opening_hours_form
 - application_form
-- faq_form
 - book_session_form
+- faq_form
+- find_slots_form
+- opening_hours_form
