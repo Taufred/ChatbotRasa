@@ -1,0 +1,1152 @@
+[
+  {
+    "text": "When are you open at noon on Friday?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 25,
+        "value": "noon",
+        "entity": "time_of_day"
+      },
+      {
+        "start": 29,
+        "end": 35,
+        "value": "Friday",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "day",
+        "start": 29,
+        "end": 35,
+        "value": "Friday",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What time do you close tomorrow night?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 31,
+        "value": "tomorrow",
+        "entity": "day"
+      },
+      {
+        "start": 32,
+        "end": 37,
+        "value": "night",
+        "entity": "time_of_day"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "day",
+        "start": 23,
+        "end": 37,
+        "value": "tomorrow night",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What time are you closing next week in the evening?",
+    "entities": [
+      {
+        "start": 43,
+        "end": 50,
+        "value": "evening",
+        "entity": "time_of_day"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "day",
+        "start": 31,
+        "end": 35,
+        "value": "week",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "time_of_day",
+        "start": 43,
+        "end": 50,
+        "value": "evening",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how about this fri?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 18,
+        "value": "Friday",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tue",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "Tuesday",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What about sun",
+    "entities": [
+      {
+        "start": 11,
+        "end": 14,
+        "value": "Sunday",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 11,
+        "end": 14,
+        "value": "Sunday",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Where can I submit my application?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 22,
+        "end": 33,
+        "value": "apply",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How can I apply for a job her?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 15,
+        "value": "apply",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 26,
+        "end": 29,
+        "value": "her",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What degree do I need?",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "degree",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How much does it pay?",
+    "entities": [
+      {
+        "start": 17,
+        "end": 20,
+        "value": "salary",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what's the process like?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 18,
+        "value": "process",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 19,
+        "end": 23,
+        "value": "like",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the application process like?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 31,
+        "value": "apply",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 12,
+        "end": 36,
+        "value": "application process like",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Muchas Gracias!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 4,
+        "value": "Much",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "name",
+        "start": 9,
+        "end": 11,
+        "value": "ac",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "8/8 it was gr8 m8",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "user_ID",
+        "start": 13,
+        "end": 17,
+        "value": "8 m8",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "am I talking to a bot?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 18,
+        "end": 21,
+        "value": "bot",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "generliok",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 9,
+        "value": "generliok",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me more about that subject?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "subject",
+        "start": 32,
+        "end": 39,
+        "value": "subject",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Lola-Mae Cantu",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Lola-Mae Cantu",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 4,
+        "value": "Lola",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "name",
+        "start": 5,
+        "end": 8,
+        "value": "Mae",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "name",
+        "start": 12,
+        "end": 14,
+        "value": "tu",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Ayah Herring",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Ayah Herring",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Rudi Unruh",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "Rudi Unruh",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 7,
+        "end": 9,
+        "value": "ru",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Uisenma Borchu",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Uisenma Borchu",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 5,
+        "end": 14,
+        "value": "ma Borchu",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "name@name.son",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "name@name.son",
+        "entity": "e-mail"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "e-mail",
+        "start": 0,
+        "end": 5,
+        "value": "name@",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "e-mail",
+        "start": 9,
+        "end": 13,
+        "value": ".son",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "harry.potter@aol.com",
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "value": "harry.potter@aol.com",
+        "entity": "e-mail"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 20,
+        "value": "harry.potter@aol.com",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "234.123@1.24",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "234.123@1.24",
+        "entity": "e-mail"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "mindbot@mindsquare.de",
+    "entities": [
+      {
+        "start": 0,
+        "end": 21,
+        "value": "mindbot@mindsquare.de",
+        "entity": "e-mail"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 21,
+        "value": "mindbot@mindsquare.de",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "m@th.is",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "m@th.is",
+        "entity": "e-mail"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "e-mail",
+        "start": 0,
+        "end": 2,
+        "value": "m@",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Slot 1 please",
+    "entities": [
+      {
+        "start": 5,
+        "end": 6,
+        "value": "1",
+        "entity": "time-slot"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Please reserve 4",
+    "entities": [
+      {
+        "start": 15,
+        "end": 16,
+        "value": "4",
+        "entity": "time-slot"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "slot 2 please",
+    "entities": [
+      {
+        "start": 5,
+        "end": 6,
+        "value": "2",
+        "entity": "time-slot"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want slot 2 (two)",
+    "entities": [
+      {
+        "start": 12,
+        "end": 13,
+        "value": "2",
+        "entity": "time-slot"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time-slot",
+        "start": 15,
+        "end": 18,
+        "value": "two",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "9:15",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "9:15",
+        "entity": "time-slot"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What time are you open 'til this evening",
+    "entities": [
+      {
+        "start": 28,
+        "end": 40,
+        "value": "this evening",
+        "entity": "time_of_day"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time_of_day",
+        "start": 33,
+        "end": 40,
+        "value": "evening",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are you open in the afternoon?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 29,
+        "value": "afternoon",
+        "entity": "time_of_day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "tomorrow",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "tomorrow",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "all of them",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "all",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "every single one",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "every",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Saturdays",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Saturday",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "When can I visit on Wednesdays?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 30,
+        "value": "Wednesday",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "day",
+        "start": 20,
+        "end": 29,
+        "value": "Wednesday",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "time_of_day",
+        "start": 29,
+        "end": 30,
+        "value": "s",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "When are you open on thu",
+    "entities": [
+      {
+        "start": 21,
+        "end": 24,
+        "value": "Thursday",
+        "entity": "day"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "e-mail",
+        "start": 21,
+        "end": 23,
+        "value": "th",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "time_of_day",
+        "start": 23,
+        "end": 24,
+        "value": "u",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am thinking of sat morning",
+    "entities": [
+      {
+        "start": 17,
+        "end": 20,
+        "value": "Saturday",
+        "entity": "day"
+      },
+      {
+        "start": 21,
+        "end": 28,
+        "value": "morning",
+        "entity": "time_of_day"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Please give me the application form",
+    "entities": [
+      {
+        "start": 19,
+        "end": 30,
+        "value": "application",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "application form?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "application",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tell me about AI",
+    "entities": [
+      {
+        "start": 14,
+        "end": 16,
+        "value": "AI",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How can I use AI?",
+    "entities": [
+      {
+        "start": 14,
+        "end": 16,
+        "value": "AI",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Tell me about the application process!",
+    "entities": [
+      {
+        "start": 18,
+        "end": 37,
+        "value": "apply",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Do I need a masters degree?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 26,
+        "value": "degree",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Do I need a diploma?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "degree",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is the salary?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "salary",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "day",
+        "start": 12,
+        "end": 18,
+        "value": "salary",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "How much does a job at mindsquare pay?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 33,
+        "value": "mindsquare",
+        "entity": "name"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "salary",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 16,
+        "end": 19,
+        "value": "job",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "e-mail",
+        "start": 23,
+        "end": 28,
+        "value": "minds",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "e-mail",
+        "start": 31,
+        "end": 33,
+        "value": "re",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me about ai",
+    "entities": [
+      {
+        "start": 14,
+        "end": 16,
+        "value": "AI",
+        "entity": "subject"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "It was meh",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 7,
+        "end": 9,
+        "value": "me",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "suhidbf",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 7,
+        "value": "suhidbf",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "143dw",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "user_ID",
+        "start": 0,
+        "end": 3,
+        "value": "143",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My name is Name Nameson",
+    "entities": [
+      {
+        "start": 11,
+        "end": 23,
+        "value": "Name Nameson",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 16,
+        "end": 21,
+        "value": "Names",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Book it under mindsquare",
+    "entities": [
+      {
+        "start": 14,
+        "end": 24,
+        "value": "mindsquare",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "e-mail",
+        "start": 14,
+        "end": 22,
+        "value": "mindsqua",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Peter Pan",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Peter Pan",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 6,
+        "end": 9,
+        "value": "Pan",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "My name is Marcus Winkler",
+    "entities": [
+      {
+        "start": 11,
+        "end": 25,
+        "value": "Marcus Winkler",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 11,
+        "end": 17,
+        "value": "Marcus",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I am Ridley Scott",
+    "entities": [
+      {
+        "start": 5,
+        "end": 17,
+        "value": "Ridley Scott",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 12,
+        "end": 17,
+        "value": "Scott",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Ridley Scott",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Ridley Scott",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 6,
+        "value": "Ridley",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Vasiliy Kool C",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Vasiliy Kool C",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 2,
+        "end": 14,
+        "value": "siliy Kool C",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Yannick Ruppert",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "Yannick Ruppert",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 14,
+        "value": "Yannick Rupper",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "my adress is this@isama.il",
+    "entities": [
+      {
+        "start": 13,
+        "end": 26,
+        "value": "this@isama.il",
+        "entity": "e-mail"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "e-mail",
+        "start": 5,
+        "end": 9,
+        "value": "ress",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "e-mail",
+        "start": 13,
+        "end": 26,
+        "value": "this@isama.il",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "the one at 10:15",
+    "entities": [
+      {
+        "start": 11,
+        "end": 16,
+        "value": "10:15",
+        "entity": "time-slot"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "time-slot",
+        "start": 13,
+        "end": 16,
+        "value": ":15",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "the earliest",
+    "entities": [
+      {
+        "start": 4,
+        "end": 12,
+        "value": "earliest",
+        "entity": "time-slot"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I am user nr. 987654",
+    "entities": [
+      {
+        "start": 14,
+        "end": 20,
+        "value": "987654",
+        "entity": "user_ID"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "e-mail",
+        "start": 10,
+        "end": 12,
+        "value": "nr",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "user_ID",
+        "start": 14,
+        "end": 20,
+        "value": "987654",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

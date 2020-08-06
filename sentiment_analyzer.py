@@ -1,12 +1,12 @@
 from rasa.nlu.components import Component
 from rasa.nlu import utils
 from rasa.nlu.model import Metadata
-
+from rasa.nlu.extractors.extractor import EntityExtractor
 import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import os
 
-class SentimentAnalyzer(Component):
+class SentimentAnalyzer(EntityExtractor):
     """A pre-trained sentiment component"""
 
     name = "sentiment"

@@ -1,0 +1,62 @@
+{
+  "day": {
+    "precision": 0.8888888888888888,
+    "recall": 0.7547169811320755,
+    "f1-score": 0.8163265306122449,
+    "support": 53
+  },
+  "e-mail": {
+    "precision": 0.9285714285714286,
+    "recall": 0.5652173913043478,
+    "f1-score": 0.7027027027027025,
+    "support": 23
+  },
+  "time_of_day": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 12
+  },
+  "time-slot": {
+    "precision": 0.5454545454545454,
+    "recall": 0.9230769230769231,
+    "f1-score": 0.6857142857142856,
+    "support": 13
+  },
+  "user_ID": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7
+  },
+  "subject": {
+    "precision": 0.9615384615384616,
+    "recall": 0.7352941176470589,
+    "f1-score": 0.8333333333333333,
+    "support": 34
+  },
+  "name": {
+    "precision": 0.9,
+    "recall": 0.39823008849557523,
+    "f1-score": 0.5521472392638036,
+    "support": 113
+  },
+  "micro avg": {
+    "precision": 0.84375,
+    "recall": 0.5294117647058824,
+    "f1-score": 0.6506024096385543,
+    "support": 255
+  },
+  "macro avg": {
+    "precision": 0.6034933320647607,
+    "recall": 0.4823622145222829,
+    "f1-score": 0.5128891559466243,
+    "support": 255
+  },
+  "weighted avg": {
+    "precision": 0.8233391009861598,
+    "recall": 0.5294117647058824,
+    "f1-score": 0.6237950014472156,
+    "support": 255
+  }
+}

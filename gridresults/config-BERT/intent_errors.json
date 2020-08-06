@@ -1,0 +1,962 @@
+[
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.2524093985557556
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform_time_and_day",
+      "confidence": 0.26903077960014343
+    }
+  },
+  {
+    "text": "sup",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_for_form",
+      "confidence": 0.27145886421203613
+    }
+  },
+  {
+    "text": "Hallo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "state_name",
+      "confidence": 0.5043566823005676
+    }
+  },
+  {
+    "text": "how about this fri?",
+    "intent": "inform_time_and_day",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5887754559516907
+    }
+  },
+  {
+    "text": "Tue",
+    "intent": "inform_time_and_day",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.39301520586013794
+    }
+  },
+  {
+    "text": "What about sun",
+    "intent": "inform_time_and_day",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.5923413634300232
+    }
+  },
+  {
+    "text": "I would like to apply for a job",
+    "intent": "apply",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.32387465238571167
+    }
+  },
+  {
+    "text": "I want to apply for a job",
+    "intent": "apply",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.425676167011261
+    }
+  },
+  {
+    "text": "I'd like to apply for a job",
+    "intent": "apply",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.4269188344478607
+    }
+  },
+  {
+    "text": "Where can I apply?",
+    "intent": "ask_for_form",
+    "intent_prediction": {
+      "name": "chatter",
+      "confidence": 0.25604119896888733
+    }
+  },
+  {
+    "text": "where can I apply",
+    "intent": "ask_for_form",
+    "intent_prediction": {
+      "name": "chatter",
+      "confidence": 0.25604119896888733
+    }
+  },
+  {
+    "text": "yes, i'd like to apply",
+    "intent": "ask_for_form",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.22054779529571533
+    }
+  },
+  {
+    "text": "sess",
+    "intent": "book_session",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.28222838044166565
+    }
+  },
+  {
+    "text": "Insane, bud!",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.7701045870780945
+    }
+  },
+  {
+    "text": "Muchas Gracias!",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "state_name",
+      "confidence": 0.9275516867637634
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "calm_down",
+      "confidence": 0.2803850769996643
+    }
+  },
+  {
+    "text": "for sure",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.24502715468406677
+    }
+  },
+  {
+    "text": "si",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.31732088327407837
+    }
+  },
+  {
+    "text": "yes, one last thing",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.863250732421875
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "calm_down",
+      "confidence": 0.4211575388908386
+    }
+  },
+  {
+    "text": "no thank you",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.7406145930290222
+    }
+  },
+  {
+    "text": "Nah, I'm good.",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3173559606075287
+    }
+  },
+  {
+    "text": "you shouldnt",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.31360116600990295
+    }
+  },
+  {
+    "text": "We already did that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.7768850922584534
+    }
+  },
+  {
+    "text": "I do NOT want a session",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.5888007283210754
+    }
+  },
+  {
+    "text": "amazing",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.6095606088638306
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.36124300956726074
+    }
+  },
+  {
+    "text": "I'm good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.19940604269504547
+    }
+  },
+  {
+    "text": "Loved it!",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.38805830478668213
+    }
+  },
+  {
+    "text": "I didn't love it",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.22951287031173706
+    }
+  },
+  {
+    "text": "not satisfied at all",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "calm_down",
+      "confidence": 0.24887718260288239
+    }
+  },
+  {
+    "text": "are you a bot?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4292695224285126
+    }
+  },
+  {
+    "text": "am I talking to a bot?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.2971782982349396
+    }
+  },
+  {
+    "text": "I like you",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.2220989316701889
+    }
+  },
+  {
+    "text": "I got this weird rash on my arm...",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.33767807483673096
+    }
+  },
+  {
+    "text": "I wanna buy a book",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.8511118292808533
+    }
+  },
+  {
+    "text": "I would like one pepperoni pizza",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.4080471694469452
+    }
+  },
+  {
+    "text": "ill take that as a yes",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.20827797055244446
+    }
+  },
+  {
+    "text": "this one?",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.28475478291511536
+    }
+  },
+  {
+    "text": "What can you do?",
+    "intent": "ask_assistance",
+    "intent_prediction": {
+      "name": "suggest",
+      "confidence": 0.14508120715618134
+    }
+  },
+  {
+    "text": "help",
+    "intent": "ask_assistance",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.3390064537525177
+    }
+  },
+  {
+    "text": "help me",
+    "intent": "ask_assistance",
+    "intent_prediction": {
+      "name": "calm_down",
+      "confidence": 0.333340048789978
+    }
+  },
+  {
+    "text": "Can you help me?",
+    "intent": "ask_assistance",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.17528346180915833
+    }
+  },
+  {
+    "text": "Do something",
+    "intent": "suggest",
+    "intent_prediction": {
+      "name": "calm_down",
+      "confidence": 0.6916817426681519
+    }
+  },
+  {
+    "text": "bwahaah",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7448597550392151
+    }
+  },
+  {
+    "text": "generliok",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "state_name",
+      "confidence": 0.9002557992935181
+    }
+  },
+  {
+    "text": "Can you tell me more?",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.42133063077926636
+    }
+  },
+  {
+    "text": "I would like to know more about that!",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.41798511147499084
+    }
+  },
+  {
+    "text": "Can you tell me more about that subject?",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.6767002940177917
+    }
+  },
+  {
+    "text": "give me an anwer",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.4457048177719116
+    }
+  },
+  {
+    "text": "Ayah Herring",
+    "intent": "state_name",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.40365877747535706
+    }
+  },
+  {
+    "text": "234.123@1.24",
+    "intent": "state_e-mail",
+    "intent_prediction": {
+      "name": "state_slot",
+      "confidence": 0.4205857813358307
+    }
+  },
+  {
+    "text": "g'day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.18146902322769165
+    }
+  },
+  {
+    "text": "Who are you",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.20391319692134857
+    }
+  },
+  {
+    "text": "when can i visit?",
+    "intent": "ask_for_opening_hours",
+    "intent_prediction": {
+      "name": "inform_time_and_day",
+      "confidence": 0.481306791305542
+    }
+  },
+  {
+    "text": "all of them",
+    "intent": "inform_time_and_day",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.6263112425804138
+    }
+  },
+  {
+    "text": "every single one",
+    "intent": "inform_time_and_day",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.8064748048782349
+    }
+  },
+  {
+    "text": "Tuesday pls",
+    "intent": "inform_time_and_day",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.574626088142395
+    }
+  },
+  {
+    "text": "I am thinking of sat morning",
+    "intent": "inform_time_and_day",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.241327702999115
+    }
+  },
+  {
+    "text": "I want an interview",
+    "intent": "apply",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.3751729726791382
+    }
+  },
+  {
+    "text": "Can I work here?",
+    "intent": "apply",
+    "intent_prediction": {
+      "name": "inform_time_and_day",
+      "confidence": 0.19871023297309875
+    }
+  },
+  {
+    "text": "Do you have any open positions?",
+    "intent": "apply",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.528790295124054
+    }
+  },
+  {
+    "text": "Can I fill out a form",
+    "intent": "ask_for_form",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.5355355143547058
+    }
+  },
+  {
+    "text": "Please redirect me",
+    "intent": "ask_for_form",
+    "intent_prediction": {
+      "name": "ask_assistance",
+      "confidence": 0.1647520363330841
+    }
+  },
+  {
+    "text": "application form?",
+    "intent": "ask_for_form",
+    "intent_prediction": {
+      "name": "state_name",
+      "confidence": 0.30205610394477844
+    }
+  },
+  {
+    "text": "yes sir, please redirect me",
+    "intent": "ask_for_form",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6181632280349731
+    }
+  },
+  {
+    "text": "Do you have someone that knows more?",
+    "intent": "book_session",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.3960478603839874
+    }
+  },
+  {
+    "text": "Who can I talk to about this?",
+    "intent": "book_session",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.1768731325864792
+    }
+  },
+  {
+    "text": "I would like to book one!",
+    "intent": "book_session",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.44163060188293457
+    }
+  },
+  {
+    "text": "Lastly, I need an expert",
+    "intent": "book_session",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.24013929069042206
+    }
+  },
+  {
+    "text": "Tell me about the application process!",
+    "intent": "ask_faq",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.2398398518562317
+    }
+  },
+  {
+    "text": "well that worked, thanks MindBot!",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.6642141342163086
+    }
+  },
+  {
+    "text": "thx",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.417574942111969
+    }
+  },
+  {
+    "text": "well that was easy, thanks mr MindBot",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.5605670809745789
+    }
+  },
+  {
+    "text": "i'm off",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3888328969478607
+    }
+  },
+  {
+    "text": "we'll speak soon",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.318390429019928
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.3212031424045563
+    }
+  },
+  {
+    "text": "I really would!",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.4326561987400055
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.8745214939117432
+    }
+  },
+  {
+    "text": "do you have something else",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "book_session",
+      "confidence": 0.1786525547504425
+    }
+  },
+  {
+    "text": "not at all",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.9916622042655945
+    }
+  },
+  {
+    "text": "oops",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8440036773681641
+    }
+  },
+  {
+    "text": "Nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.29403209686279297
+    }
+  },
+  {
+    "text": "perfect",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.4608944058418274
+    }
+  },
+  {
+    "text": "great",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "ask_assistance",
+      "confidence": 0.1819915920495987
+    }
+  },
+  {
+    "text": "I am feeling very good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.1889490932226181
+    }
+  },
+  {
+    "text": "I am happy",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.20667065680027008
+    }
+  },
+  {
+    "text": "You are useless.",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.23168231546878815
+    }
+  },
+  {
+    "text": "you are useless",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.23168231546878815
+    }
+  },
+  {
+    "text": "excellent",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.26847049593925476
+    }
+  },
+  {
+    "text": "1 star",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "state_slot",
+      "confidence": 0.4303798973560333
+    }
+  },
+  {
+    "text": "i am!",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.26266592741012573
+    }
+  },
+  {
+    "text": "I'm happy about that",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.30243435502052307
+    }
+  },
+  {
+    "text": "Fine, thanks for asking",
+    "intent": "feedback",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.8859699964523315
+    }
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.9982081651687622
+    }
+  },
+  {
+    "text": "are you a human?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "ask_for_form",
+      "confidence": 0.22375032305717468
+    }
+  },
+  {
+    "text": "am I talking to a human?",
+    "intent": "bot_challenge",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.28506389260292053
+    }
+  },
+  {
+    "text": "banana?",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "state_name",
+      "confidence": 0.28794631361961365
+    }
+  },
+  {
+    "text": "Banana?",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "state_name",
+      "confidence": 0.28794631361961365
+    }
+  },
+  {
+    "text": "What is meaning of life?",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.9025061726570129
+    }
+  },
+  {
+    "text": "Can you give me a phone number?",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.20541711151599884
+    }
+  },
+  {
+    "text": "🍆",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.19827722012996674
+    }
+  },
+  {
+    "text": "📚",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.19827722012996674
+    }
+  },
+  {
+    "text": "what's your favorite color?",
+    "intent": "chatter",
+    "intent_prediction": {
+      "name": "ask_for_opening_hours",
+      "confidence": 0.30344876646995544
+    }
+  },
+  {
+    "text": "You could do this better",
+    "intent": "suggest",
+    "intent_prediction": {
+      "name": "calm_down",
+      "confidence": 0.20610311627388
+    }
+  },
+  {
+    "text": "Improve on this",
+    "intent": "suggest",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2441527098417282
+    }
+  },
+  {
+    "text": "suhidbf",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.20942097902297974
+    }
+  },
+  {
+    "text": "143dw",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.3982967436313629
+    }
+  },
+  {
+    "text": "Please explain in more detail!",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.27709606289863586
+    }
+  },
+  {
+    "text": "Anything else?",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.4684828221797943
+    }
+  },
+  {
+    "text": "What is that all about?",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "ask_faq",
+      "confidence": 0.34049585461616516
+    }
+  },
+  {
+    "text": "Can you specify?",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.20854727923870087
+    }
+  },
+  {
+    "text": "Answer my question",
+    "intent": "ask_more",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.21226219832897186
+    }
+  },
+  {
+    "text": "Book it under mindsquare",
+    "intent": "state_name",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.23243607580661774
+    }
+  },
+  {
+    "text": "the one at 10:15",
+    "intent": "state_slot",
+    "intent_prediction": {
+      "name": "feedback",
+      "confidence": 0.5888594388961792
+    }
+  },
+  {
+    "text": "the earliest",
+    "intent": "state_slot",
+    "intent_prediction": {
+      "name": "state_name",
+      "confidence": 0.6646371483802795
+    }
+  },
+  {
+    "text": "you too fast",
+    "intent": "calm_down",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.41395828127861023
+    }
+  },
+  {
+    "text": "chill out",
+    "intent": "calm_down",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.47826647758483887
+    }
+  },
+  {
+    "text": "maybe go to bed, get some rest?",
+    "intent": "calm_down",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.21996085345745087
+    }
+  }
+]
