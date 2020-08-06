@@ -60,22 +60,22 @@ slots:
     type: text
 responses:
   utter_anything_else:
-  - text: Is there anything else I can help you with?
-    buttons:
-    - title: "Opening Hours"
-      payload: "/ask_for_opening_hours"
-    - title: "Apply for a job"
-      payload: "/apply"
-    - title: "Book a friday expert session"
-      payload: "/book_session"
+  - buttons:
+    - payload: /ask_for_opening_hours
+      title: Opening Hours
+    - payload: /apply
+      title: Apply for a job
+    - payload: /book_session
+      title: Book a friday expert session
+    text: Is there anything else I can help you with?
   utter_application:
-  - text: Can I answer any questions regarding the application process or redirect
+  - buttons:
+    - payload: /ask_faq{'subject':'apply'}
+      title: Tell me about the application process.
+    - payload: /ask_for_form
+      title: Redirect me, please.
+    text: Can I answer any questions regarding the application process or redirect
       you to the application form?
-    buttons:
-    - title: "Tell me about the application process."
-      payload: "/ask_faq{'subject':'apply'}"
-    - title: "Redirect me, please."
-      payload: "/ask_for_form"
   utter_ask_book_session:
   - text: Perhaps you would like to speak with one of our experts. We offer special
       expert sessions on Fridays in which all of your questions can be answered. Should
@@ -101,29 +101,29 @@ responses:
   - text: Goodbye, it was nice talking to you!
   - text: Goodbye! 👋
   utter_greet:
-  - text: Hello there! I, MindBot, am here to assist you for any questions you have.
+  - buttons:
+    - payload: /ask_for_opening_hours
+      title: Opening Hours
+    - payload: /apply
+      title: Apply for a job
+    - payload: /book_session
+      title: Book a friday expert session
+    text: Hello there! I, MindBot, am here to assist you for any questions you have.
       What can I help you with today?
-    buttons:
-    - title: "Opening Hours"
-      payload: "/ask_for_opening_hours"
-    - title: "Apply for a job"
-      payload: "/apply"
-    - title: "Book a friday expert session"
-      payload: "/book_session"
   utter_happy:
   - text: Great, carry on!
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
   utter_tasks:
-  - text: I can help you with applying for a job, booking a session with one of our
+  - buttons:
+    - payload: /ask_for_opening_hours
+      title: Opening Hours
+    - payload: /apply
+      title: Apply for a job
+    - payload: /book_session
+      title: Book a friday expert session
+    text: I can help you with applying for a job, booking a session with one of our
       experts or other questions e.g. regarding our opening hours.
-    buttons:
-    - title: "Opening Hours"
-      payload: "/ask_for_opening_hours"
-    - title: "Apply for a job"
-      payload: "/apply"
-    - title: "Book a friday expert session"
-      payload: "/book_session"
   utter_thanks:
   - text: Thank you.
   utter_thumbsup:

@@ -4,7 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.forms import FormAction
 from rasa_sdk.events import EventType, SlotSet, SessionStarted, ActionExecuted
-
+from rasa.core.trackers import DialogueStateTracker
 import calendar
 import json
 import os
@@ -238,8 +238,9 @@ class ActionTagFeedback(Action):
         feedback = tracker.get_slot("sentiment")
 
         if feedback == "pos":
-        	label = '[{"value":"postive feedback","color":"76af3d"}]'
-        	#export_stories_to_file(tracker.events,tracker.sender_id,export_path="./data/stories.md")
+            label = '[{"value":"postive feedback","color":"76af3d"}]'
+            DST = DialogueStateTracker(tracker.events, [])
+            DST.export_stories_to_file(export_path="data/stories.md")
         elif feedback == "neg":
             label = '[{"value":"negative feedback","color":"ff0000"}]'
         else:
