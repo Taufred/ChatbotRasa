@@ -70,7 +70,7 @@ responses:
     text: Is there anything else I can help you with?
   utter_application:
   - buttons:
-    - payload: /ask_faq{'subject':'apply'}
+    - payload: /ask_faq{"subject":"apply"}
       title: Tell me about the application process.
     - payload: /ask_for_form
       title: Redirect me, please.
