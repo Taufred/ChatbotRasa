@@ -51,7 +51,6 @@ entities:
 - time-slot
 - time_of_day
 - user_ID
-- sentiment
 slots:
   day:
     type: text
@@ -61,12 +60,6 @@ slots:
     type: text
   requested_slot:
     type: unfeaturized
-  sentiment:
-    type: categorical
-    values:
-    - pos
-    - neu
-    - neg
   subject:
     type: text
   time-slot:

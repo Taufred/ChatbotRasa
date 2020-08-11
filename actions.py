@@ -235,8 +235,9 @@ class ActionTagFeedback(Action):
     def run(self, dispatcher, tracker, domain) -> List[EventType]:
     	
 
-        feedback = tracker.get_slot("sentiment")
-
+        for value in tracker.get_latest_entity_values("sentiment"):
+        	feedback = value
+        print(feedback)
         if feedback == "pos":
             label = '[{"value":"postive feedback","color":"76af3d"}]'
             DST = DialogueStateTracker(tracker.events, [])

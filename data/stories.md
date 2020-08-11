@@ -270,20 +270,11 @@
 * chatter
     - utter_chatter
 
-## Feedback_pos
+## Feedback
 > check_conversation_finish
     - utter_ask_feedback
-* feedback{"sentiment":"pos"}
+* feedback
     - action_tag_feedback
-    - utter_thumbsup
-    - utter_anything_else
-
-## Feedback_neg
-> check_conversation_finish
-    - utter_ask_feedback
-* feedback{"sentiment":"neg"}
-    - action_tag_feedback
-    - utter_thanks
     - utter_anything_else
 
 ## interactive_story_1
@@ -406,9 +397,8 @@
 * thank
     - utter_welcome
     - utter_ask_feedback
-* feedback{"sentiment":"pos"}
+* feedback
     - action_tag_feedback
-    - utter_thumbsup
     - utter_anything_else
 * deny
     - utter_goodbye
@@ -418,9 +408,8 @@
     - utter_greet
 
 ## user_asks_more
-* feedback{"sentiment":"pos"}
+* feedback
     - action_tag_feedback
-    - utter_thumbsup
     - utter_anything_else
 * affirm
     - utter_tasks
@@ -561,9 +550,8 @@
 * thank
   - utter_welcome
   - utter_ask_feedback
-* feedback{"sentiment":"pos"}
+* feedback
   - action_tag_feedback
-  - utter_thumbsup
   - utter_anything_else
 * ask_for_form
   - application_form
@@ -573,9 +561,8 @@
 * thank
   - utter_welcome
   - utter_ask_feedback
-* feedback{"sentiment":"pos"}
+* feedback
   - action_tag_feedback
-  - utter_thumbsup
   - utter_anything_else
 * affirm
   - utter_tasks
@@ -751,9 +738,8 @@
  - form{"name":null}
 
 ## feedback+form
-* feedback+ask_for_form{"sentiment":"pos"}
+* feedback+ask_for_form
   - action_tag_feedback
-  - utter_thumbsup
   - application_form
   - form{"name":"application_form"}
   - form{"name":null}
@@ -777,35 +763,34 @@
  - form{"name":null}
 
 ## Story from conversation with 9012289bf9af40b0a2e41dd14f719bc9 on August 11th 2020
-* state_user_ID{"sentiment":"neu","user_ID":"456128"}
+* state_user_ID{"user_ID":"456128"}
     - utter_greet
-* greet+ask_for_opening_hours{"sentiment":"neu"}
+* greet+ask_for_opening_hours
     - utter_greet
     - utter_ask_time_and_day
-* inform_time_and_day{"sentiment":"neu","day":"Saturday","time_of_day":"morning"}
+* inform_time_and_day{"day":"Saturday","time_of_day":"morning"}
     - slot{"day":"Saturday"}
     - slot{"time_of_day":"morning"}
     - opening_hours_form
     - form{"name":"opening_hours_form"}
     - slot{"day":"Saturday"}
-* book_session{"sentiment":"neu"}
+* book_session
     - utter_ask_name
-* state_name{"sentiment":"neu","name":"Ju"}
+* state_name{"name":"Ju"}
     - slot{"name":"Ju"}
     - utter_ask_e-mail
-* state_e-mail{"sentiment":"neu","e-mail":"juse@ju.de"}
+* state_e-mail{"e-mail":"juse@ju.de"}
     - slot{"e-mail":"juse@ju.de"}
     - find_slots_form
     - form{"name":"find_slots_form"}
     - slot{"name":"Ju"}
     - slot{"e-mail":"juse@ju.de"}
-* state_slot{"sentiment":"neg","time-slot":"3"}
+* state_slot{"time-slot":"3"}
     - book_session_form
     - form{"name":"book_session_form"}
-* thank{"sentiment":"pos"}
+* thank
     - utter_welcome
     - utter_ask_feedback
-* feedback{"sentiment":"pos"}
+* feedback
     - action_tag_feedback
-    - utter_thumbsup
     - utter_anything_else
