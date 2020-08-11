@@ -27,6 +27,22 @@ intents:
 - out_of_scope
 - state_user_ID
 - calm_down
+- greet+inform_time_and_day
+- greet+ask_for_opening_hours
+- greet+apply
+- greet+ask_for_form
+- greet+ask_faq
+- greet+book_session
+- affirm+inform_time_and_day
+- affirm+ask_faq
+- state_name+state_e-mail
+- affirm+state_name
+- affirm+apply
+- ask_faq+ask_for_form
+- feedback+ask_for_form
+- book_session+inform_time_and_day
+- apply+ask_for_form
+- apply+ask_faq
 entities:
 - day
 - e-mail

@@ -278,14 +278,6 @@
     - utter_thumbsup
     - utter_anything_else
 
-## Feedback_neu
-> check_conversation_finish
-    - utter_ask_feedback
-* feedback{"sentiment":"neu"}
-    - action_tag_feedback
-    - utter_thumbsup
-    - utter_anything_else
-
 ## Feedback_neg
 > check_conversation_finish
     - utter_ask_feedback
@@ -426,7 +418,7 @@
     - utter_greet
 
 ## user_asks_more
-* feedback{"sentiment":"neu"}
+* feedback{"sentiment":"pos"}
     - action_tag_feedback
     - utter_thumbsup
     - utter_anything_else
@@ -581,7 +573,7 @@
 * thank
   - utter_welcome
   - utter_ask_feedback
-* feedback{"sentiment":"neu"}
+* feedback{"sentiment":"pos"}
   - action_tag_feedback
   - utter_thumbsup
   - utter_anything_else
@@ -671,4 +663,117 @@
   -utter_anything_else
 * deny
   - utter_goodbye
-  
+
+## greet+openinghours
+* greet+ask_for_opening_hours
+  - utter_greet
+  - utter_ask_time_and_day
+
+## greet+day
+* greet+inform_time_and_day{"day": "Monday"}
+ - utter_greet
+ - slot{"day":"Monday"}
+ - opening_hours_form
+ - form{"name":"opening_hours_form"}
+ - form{"name": null}
+ - slot{"time_of_day": null}
+
+## greet+apply
+* greet+apply
+  - utter_greet
+  - utter_application 
+
+## greet+ask_for_form
+* greet+ask_for_form
+ - utter_greet
+ - application_form
+ - form{"name":"application_form"}
+ - form{"name":null}
+
+## greet+faq
+* greet+ask_faq{"subject":"apply"}
+ - utter_greet
+ - slot{"subject":"apply"}
+ - faq_form
+ - form{"name":"faq_form"}
+ - form{"name":null}
+
+## greet+book
+* greet+book_session
+  - utter_greet
+  - utter_ask_name
+
+## affirm+day
+* state_user_ID
+ - utter_greet
+* ask_for_opening_hours
+ - utter_ask_time_and_day
+* affirm+inform_time_and_day{"day": "Tuesday"}
+ - slot{"day":"Tuesday"}
+ - opening_hours_form
+ - form{"name":"opening_hours_form"}
+ - form{"name": null}
+ - slot{"time_of_day": null}
+
+## affirm+ask_faq
+* affirm+ask_faq{"subject": "apply"}
+ - slot{"subject":"apply"}
+ - faq_form
+ - form{"name":"faq_form"}
+ - form{"name":null}
+
+## state_name_and_mail
+* state_name+state_e-mail{"name":"Myrte Nijhuis","e-mail":"myrte@myrte.de"}
+  - slot{"name":"Myrte Nijhuis"}
+  - slot{"e-mail":"myrte@myrte.de"}
+  - find_slots_form
+  - form{"name":"find_slots_form"}
+  - form{"name": null}
+  - slot{"requested_slot": null}
+
+## affirm+state_name
+* affirm+state_name{"name": "Jan Feldmann"}
+    - slot{"name": "Jan Feldmann"}
+    - utter_ask_e-mail
+
+## affirm+apply
+* affirm+apply
+ - utter_application 
+
+## ask_faq+ask_for_form
+* ask_faq+ask_for_form{"subject":"apply"}
+ - slot{"subject":"apply"}
+ - faq_form
+ - form{"name":"faq_form"}
+ - form{"name":null}
+ - application_form
+ - form{"name":"application_form"}
+ - form{"name":null}
+
+## feedback+form
+* feedback+ask_for_form{"sentiment":"pos"}
+  - action_tag_feedback
+  - utter_thumbsup
+  - application_form
+  - form{"name":"application_form"}
+  - form{"name":null}
+  - utter_anything_else
+
+## book+day
+* book_session+inform_time_and_day{"day":"Friday"}
+ - utter_ask_name
+
+## apply+form
+* apply+ask_for_form
+ - application_form
+ - form{"name":"application_form"}
+ - form{"name":null}
+
+## apply+ask_faq
+* apply+ask_faq{"subject":"apply"}
+ - slot{"subject":"apply"}
+ - faq_form
+ - form{"name":"faq_form"}
+ - form{"name":null}
+
+ 

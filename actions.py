@@ -240,7 +240,7 @@ class ActionTagFeedback(Action):
         if feedback == "pos":
             label = '[{"value":"postive feedback","color":"76af3d"}]'
             DST = DialogueStateTracker(tracker.events, [])
-            DST.export_stories_to_file(export_path="data/stories.md")
+            #DST.export_stories_to_file(export_path="data/stories.md")
         elif feedback == "neg":
             label = '[{"value":"negative feedback","color":"ff0000"}]'
         else:

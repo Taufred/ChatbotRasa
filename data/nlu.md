@@ -543,6 +543,96 @@
 - [204770](user_ID)
 - My ID is [204770](user_ID)
 
+## intent:greet+ask_for_opening_hours
+- Hello, I would like to know your opening hours
+- Hi when can I visit the company?
+- Hey Bot, when are you open?
+- Yo, what are your opening times?
+
+## intent:greet+inform_time_and_day
+- Hi I want to visit on [Saturday](day)
+- hello when can I visit on [Saturday](day) [morning]?
+- hey there, what is the opening time on [Saturday](day)
+- Hiya, I'd need to know whether you are open on [Friday](day) [evening](time_of_day)
+
+## intent:greet+apply
+- hello? I want a job opportunity
+- hiya are you hiring at the moment?
+- Good day, I'd like to know whether there are job opportunities
+- Hey, can I apply?
+
+## intent:greet+ask_for_form
+- hello bot, what is the link to the application page
+- hi you, please redirect em
+- hey where can I apply?
+- Hey bot, please send me the link
+
+## intent:greet+ask_faq
+- good morning, can you tell me about the [application process]{"entity": "subject", "value": "apply"}
+- hey there, What can you tell me about [AI](subject)?
+- yo bot how does the [application]{"entity": "subject", "value": "apply"} work?
+- Hi, can you explain to me what is [Artificial Intelligence]{"entity":"subject","value":"AI"}?
+
+## intent:greet+book_session
+- good day sir, I'd like to book an expert session
+- hello do you offer sessions?
+- Good evening, may I book a special expert session?
+- Morning, do you offer expert sessions?
+
+## intent:affirm+inform_time_and_day
+- yes on [Saturday](day)
+- yes please, [Friday](day)
+- sure, what about [Tuesday](day)
+- Yeah, [Wednesday](day) please
+
+## intent:affirm+ask_faq
+- yes, tell me about the [process]{"entity": "subject", "value": "apply"}
+- yeah, I want to know more about [Artificial Intelligence]{"entity":"subject","value":"AI"}
+- For sure, who do I send the [application]{"entity": "subject", "value": "apply"} to?
+- Absolutely, but how does the [process]{"entity": "subject", "value": "apply"} work?
+
+## intent:state_name+state_e-mail
+- My name is [Peter Pettigrew](name) and my mail is [peter.p@igrew.com](e-mail)
+- I am [Lois McFarley](name) and my mail adress is [lois@mc-donals.org](e-mail)
+- [Nick Veerman](name), [nick@student.ru.nl](e-mail)
+
+## intent:affirm+state_name
+- yes, for [Myrte Nijhuis](name)
+- yes please, [Lindsay Lohan](name)
+- correct, [Lukas Skywalker](name)
+- yes and my name is [Tom Riddle](name)
+
+## intent:affirm+apply
+- yes, I'd like to apply
+- correct, I need a job
+- Absolutely and please hire me
+- Sure, but I also need a job
+
+## intent:ask_faq+ask_for_form
+- I want to know about the [application process]{"entity": "subject", "value": "apply"} and a link to the application page.
+- Can you tell me more on how to [apply](subject) or send me a link to the form?
+
+## intent:feedback+ask_for_form
+- It was good but I still need the link for the application
+- It was okay, but I am missing the application form.
+- Not very good, you did not redirect me.
+
+## intent:book_session+inform_time_and_day
+- I'd like to book a session on [Friday](day)
+- Can I book a session on [Wednesday](day)?
+- I'd like to book a special expert session on [Monday](day)
+
+## intent:apply+ask_for_form
+- I want to apply, please redirect me.
+- I need a job, can you send me a link?
+- Are you hiring? I want to fill in the application form.
+
+## intent:apply+ask_faq
+- I want a job, what is the [process]{"entity": "subject", "value": "apply"} like?
+- Are you hiring? Who do I send my [application]{"entity": "subject", "value": "apply"}?
+- Do you have any job offers? Where can I submit my [application]{"entity": "subject", "value": "apply"}?
+
+
 ## synonym:AI
 - artificial intelligence
 - ai
