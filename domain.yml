@@ -51,7 +51,6 @@ entities:
 - time-slot
 - time_of_day
 - user_ID
-- time_slot
 - sentiment
 slots:
   day:

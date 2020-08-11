@@ -551,7 +551,7 @@
 
 ## intent:greet+inform_time_and_day
 - Hi I want to visit on [Saturday](day)
-- hello when can I visit on [Saturday](day) [morning]?
+- hello when can I visit on [Saturday](day) [morning](time_of_day)?
 - hey there, what is the opening time on [Saturday](day)
 - Hiya, I'd need to know whether you are open on [Friday](day) [evening](time_of_day)
 
