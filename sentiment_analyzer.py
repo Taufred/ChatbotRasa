@@ -10,8 +10,6 @@ class SentimentAnalyzer(EntityExtractor):
     """A pre-trained sentiment component"""
 
     name = "sentiment"
-    provides = ["entities"]
-    requires = []
     defaults = {}
     language_list = ["en"]
 

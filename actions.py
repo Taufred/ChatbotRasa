@@ -242,9 +242,12 @@ class ActionTagFeedback(Action):
             label = '[{"value":"postive feedback","color":"76af3d"}]'
             DST = DialogueStateTracker(tracker.events, [])
             #DST.export_stories_to_file(export_path="data/stories.md")
+            dispatcher.utter_message("Thank you! 👍")
         elif feedback == "neg":
             label = '[{"value":"negative feedback","color":"ff0000"}]'
+            dispatcher.utter_message("Thank you for the feedback!")
         else:
+        	dispatcher.utter_message("Thanks!")
         	return []
-        tag_convo(tracker, label)
+        #tag_convo(tracker, label)
         return []
