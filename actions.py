@@ -249,5 +249,5 @@ class ActionTagFeedback(Action):
         else:
         	dispatcher.utter_message("Thanks!")
         	return []
-        #tag_convo(tracker, label)
+        tag_convo(tracker, label)
         return []
