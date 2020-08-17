@@ -196,7 +196,11 @@ class Find_slots_form(FormAction):
 			domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 		name = tracker.get_slot("name")
 		e_mail = tracker.get_slot("e-mail")
-		dispatcher.utter_message("We have slots available at 1: 10:15, 2: 11:15 and 3: 12:45 for you on Friday, {}. Please reply with the slot number you want to reserve.".format(name))
+		buttons = []
+		for i in range(3):
+			payload = "/state_slot{\"time-slot\":\"" + str(i+1) + "\"}"
+			buttons.append({"title": "Slot Nr. {}".format(str(i+1)), "payload": payload})
+		dispatcher.utter_button_message("We have slots available at 1: 10:15, 2: 11:15 and 3: 12:45 for you on Friday, {}. Please reply with the slot number you want to reserve.".format(name),buttons)
 		return []
 
 
