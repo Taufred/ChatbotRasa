@@ -621,6 +621,7 @@
 - I'd like to book a session on [Friday](day)
 - Can I book a session on [Wednesday](day)?
 - I'd like to book a special expert session on [Monday](day)
+- I would like to have a conversation to an expert and to know what the opening times on [sunday]{"entity":"day","value":"Sunday"} are
 
 ## intent:apply+ask_for_form
 - I want to apply, please redirect me.
@@ -632,6 +633,16 @@
 - Are you hiring? Who do I send my [application]{"entity": "subject", "value": "apply"}?
 - Do you have any job offers? Where can I submit my [application]{"entity": "subject", "value": "apply"}?
 
+
+## intent:ask_for_form+inform_time_and_day
+- I want a link to the application form and when are you open on [monday]{"entity":"day","value":"Monday"}?
+- application form and opening times for [sat]{"entity":"day","value":"Saturday"} pls
+- Can you redirect me and tell me when I can visit on [Thursday](day)?
+
+## affirm+book_session
+- ok. What about to talk to an expert?
+- yes,  also I need an expert sesson.
+- Sure, I'd also like to book a friday expert session-
 
 ## synonym:AI
 - artificial intelligence

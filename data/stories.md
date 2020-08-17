@@ -794,3 +794,36 @@
 * feedback
     - action_tag_feedback
     - utter_anything_else
+
+
+## Story from conversation with 3cae0edbacb44e3ba265a4d4373de6a5 on August 17th 2020
+* greet
+  - utter_greet
+* apply
+  - utter_application
+* ask_more
+  - application_form
+  - form{"name":"application_form"}
+  - form{"name":null}
+
+## faq no subject
+ - faq_form
+ - form{"name":"faq_form"}
+ - form{"name":null}
+ - slot{"requested_slot": "subject"}
+ - utter_default
+
+## form+openinghours
+* ask_for_form+inform_time_and_day{"day":"Sunday"}
+  - application_form
+  - form{"name":"application_form"}
+  - form{"name":null}
+  - slot{"day":"Monday"}
+  - opening_hours_form
+  - form{"name":"opening_hours_form"}
+  - form{"name": null}
+  - slot{"time_of_day": null}
+
+## affirm+book_session
+* affirm+book_session
+  - utter_ask_name
