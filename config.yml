@@ -5,6 +5,7 @@ pipeline:
   - name: HFTransformersNLP
     model_weights: "bert-base-uncased"
     model_name: "bert"
+    cache_dir: /tmp
   - name: LanguageModelTokenizer
     intent_tokenization_flag: True
     intent_split_symbol: "+"
