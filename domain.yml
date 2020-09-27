@@ -43,6 +43,8 @@ intents:
 - book_session+inform_time_and_day
 - apply+ask_for_form
 - apply+ask_faq
+- affirm+book_session
+- ask_for_form+inform_time_and_day
 entities:
 - day
 - e-mail
